@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    # command: uvicorn app.main:app --proxy-headers --host 0.0.0.0 --port 80 --reload # for development
+    ports:
+      - 8000:80
+    environment:
+      - POKEMANTLE_POKEDEX=/data/pokedex.csv
+      - POKEMANTLE_NAME_MAP=/data/name_map.csv
+      - POKEMANTLE_PRODUCTION=True
+    volumes:
+      - ./data:/data
+      # - ./backend/app:/app/app # for development

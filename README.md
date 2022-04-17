@@ -3,6 +3,12 @@ Pokémantle
 
 Pokémon guessing game inspired by [Semantle](https://semantle.novalis.org/)
 
+# Start server
+
+```bash
+docker-compose up
+```
+
 
 # Data source
 

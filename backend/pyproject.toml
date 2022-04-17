@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "pokemantle"
+name = "pokemantle-backend"
 version = "0.1.0"
 description = "Pokémon guessing game inspired by Semantle"
 authors = ["Nesswit <rishubil@gmail.com>"]
 license = "MIT"
 packages = [
-    { include="backend", from="." },
+    { include="app", from="." },
 ]
 
 [tool.poetry.dependencies]
@@ -23,4 +23,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-start = "backend.main:start"
+start = "app.main:start"

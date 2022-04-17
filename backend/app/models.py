@@ -58,6 +58,11 @@ class Pokemon(BaseModel):
     against_fairy: float = Field(..., example=1)
 
 
+class LocalName(BaseModel):
+    english_name: str = Field(..., example="Mimikyu")
+    local_name: str = Field(..., example="따라큐")
+
+
 class ErrorMessage(BaseModel):
     code: int = Field(..., example=11)
     message: str = Field(..., example="Pokémon not found.")

@@ -9,7 +9,7 @@ from fastapi.responses import JSONResponse
 import pandas as pd
 import numpy as np
 
-from .models import ErrorMessage, GuessResult, Pokemon
+from .models import ErrorMessage, GuessResult, Pokemon, LocalName
 from .poke2vec import (
     calculate_ranks,
     calculate_similarity_vector,
@@ -19,9 +19,14 @@ from .poke2vec import (
 if "POKEMANTLE_POKEDEX" not in os.environ:
     raise Exception("environment variable POKEMANTLE_POKEDEX is not defined")
 
+if "POKEMANTLE_NAME_MAP" not in os.environ:
+    raise Exception("environment variable POKEMANTLE_NAME_MAP is not defined")
+
 RANDOM = Random(os.environ.get("POKEMANTLE_RANDOM_SEED", 20211101))
 
 POKEDEX = pd.read_csv(os.environ["POKEMANTLE_POKEDEX"]).replace({np.nan: None})
+POKEMON_NAME_MAP = pd.read_csv(os.environ["POKEMANTLE_NAME_MAP"])
+
 POKEMON_SIZE = len(POKEDEX.index)
 SECRET_INDEXES = RANDOM.sample(range(POKEMON_SIZE), k=POKEMON_SIZE)
 SIMILARITY_VECTOR = calculate_similarity_vector(
@@ -29,12 +34,29 @@ SIMILARITY_VECTOR = calculate_similarity_vector(
 )
 
 
-app = FastAPI()
+app = FastAPI(
+    docs_url=None if os.environ.get("POKEMANTLE_PRODUCTION", False) else "/docs",
+    redoc_url=None,
+)
 
 
 def secret_index(puzzle_number: int) -> int:
     print(puzzle_number % POKEMON_SIZE)
     return SECRET_INDEXES[puzzle_number % POKEMON_SIZE]
+
+
+@app.get(
+    "/languages",
+    response_model=List[str],
+    responses={
+        200: {
+            "content": {"application/json": {"example": ["English", "Korean"]}},
+        },
+    },
+)
+async def languages():
+    """The list of all languages"""
+    return [name for name in POKEMON_NAME_MAP]
 
 
 @app.get(
@@ -44,6 +66,25 @@ def secret_index(puzzle_number: int) -> int:
 async def pokemons():
     """The list of all Pokémons"""
     return [POKEDEX.loc[i].to_dict() for i in POKEDEX.index]
+
+
+@app.get(
+    "/pokemon_name_map/{language}",
+    response_model=List[LocalName],
+)
+async def pokemon_name_map(
+    language: str = Path(..., description="The language to use", example="Korean"),
+):
+    """The list of all Pokémon's local names"""
+
+    items = [POKEMON_NAME_MAP.loc[i] for i in POKEMON_NAME_MAP.index]
+    return [
+        LocalName(
+            english_name=item["English"],
+            local_name=item[language],
+        )
+        for item in items
+    ]
 
 
 @app.get(
@@ -102,7 +143,3 @@ async def guess(
             message="Pokémon not found.",
         ).dict(),
     )
-
-
-def start():
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=8000, reload=True)
