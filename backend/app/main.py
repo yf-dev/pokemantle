@@ -5,6 +5,7 @@ import os
 from random import Random
 
 from fastapi import FastAPI, Query, Path
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import pandas as pd
 import numpy as np
@@ -33,11 +34,19 @@ SIMILARITY_VECTOR = calculate_similarity_vector(
     feature_vector=create_feature_vector(pokedex=POKEDEX)
 )
 
-
 app = FastAPI(
     docs_url=None if os.environ.get("POKEMANTLE_PRODUCTION", False) else "/docs",
     redoc_url=None,
 )
+
+if not os.environ.get("POKEMANTLE_PRODUCTION", False):
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 
 def secret_index(puzzle_number: int) -> int:
