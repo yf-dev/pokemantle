@@ -5,4 +5,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss'
   ],
+  typescript: {
+    shim: false
+  },
+  runtimeConfig: {
+    public: {
+       apiBase: 'http://localhost:8000'
+    }
+  }
 })

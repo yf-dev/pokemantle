@@ -1,17 +1,31 @@
 <template>
   <div>
-    <input type="text" class="border rounded border-black" placeholder="포켓몬 이름" />
+    <input
+      type="text"
+      class="border rounded border-black"
+      placeholder="이름"
+      :value="name"
+      @input="(event) => (name = event.target.value)"
+      @keydown.enter="guess"
+    />
     <button class="border rounded border-black" @click="guess">추측</button>
   </div>
 </template>
 
-<script setup>
-
+<script setup lang="ts">
+import { FetchError } from "ohmyfetch"
+const name = ref("")
 async function guess() {
-  const pokemon = "Mimikyu"
-  const puzzle_number = 1
-  const { data } = await useFetch(`http://localhost:8000/guess/${puzzle_number}?name=${pokemon}`)
-  addGuessResult(data.value)
-  console.log(guess_results)
+  try {
+    const data = await apiGuess(puzzle_number.value, name.value)
+    addGuessResult(data)
+    name.value = ""
+  } catch (e) {
+    if (e instanceof FetchError) {
+      console.error(e.data.code === 11)
+    } else {
+      throw e
+    }
+  }
 }
 </script>
