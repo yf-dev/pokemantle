@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    command: uvicorn app.main:app --proxy-headers --host 0.0.0.0 --port 80 --reload
+    ports:
+      - 8000:80
+    environment:
+      - POKEMANTLE_POKEDEX=/data/pokedex.csv
+      - POKEMANTLE_NAME_MAP=/data/name_map.csv
+    volumes:
+      - ./data:/data
+      - ./backend/app:/app/app
+  frontend:
+    build: ./frontend
+    entrypoint: sh
+    command: -c "npm install && npm run dev"
+    ports:
+      - 3000:3000
+      - 50443:50443
+    volumes:
+      - ./frontend:/home/node/app

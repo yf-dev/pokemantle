@@ -1,6 +1,7 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from 'nuxt'
+import fluentPlugin from 'rollup-plugin-fluent-vue'
 
-// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss'
@@ -10,7 +11,17 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-       apiBase: 'http://localhost:8000'
+      apiBase: 'http://localhost:8000'
     }
+  },
+  vite: {
+    plugins: [fluentPlugin()],
+    server: {
+      hmr: {
+        protocol: 'ws', // TODO: parse from env var
+        port: 50443,
+        clientPort: 50443,
+      },
+    },
   }
 })

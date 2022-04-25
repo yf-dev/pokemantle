@@ -59,7 +59,7 @@ def secret_index(puzzle_number: int) -> int:
     response_model=List[str],
     responses={
         200: {
-            "content": {"application/json": {"example": ["English", "Korean"]}},
+            "content": {"application/json": {"example": ["en", "ko"]}},
         },
     },
 )
@@ -82,14 +82,14 @@ async def pokemons():
     response_model=List[LocalName],
 )
 async def pokemon_name_map(
-    language: str = Path(..., description="The language to use", example="Korean"),
+    language: str = Path(..., description="The language to use", example="ko"),
 ):
     """The list of all Pokémon's local names"""
 
     items = [POKEMON_NAME_MAP.loc[i] for i in POKEMON_NAME_MAP.index]
     return [
         LocalName(
-            english_name=item["English"],
+            english_name=item["en"],
             local_name=item[language],
         )
         for item in items

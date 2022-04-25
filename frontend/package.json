@@ -1,13 +1,21 @@
 {
+  "name": "pokemantle-frontend",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "node .output/server/index.mjs"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.0.2",
-    "nuxt3": "^3.0.0-27505965.7a316c2",
-    "prettier": "^2.6.2"
+    "nuxt": "^3.0.0-rc.1",
+    "prettier": "^2.6.2",
+    "rollup-plugin-fluent-vue": "^3.0.1"
+  },
+  "dependencies": {
+    "@fluent/bundle": "^0.17.1",
+    "fluent-vue": "^3.0.1"
   }
 }

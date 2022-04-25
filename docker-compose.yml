@@ -2,7 +2,6 @@ version: "3.9"
 services:
   backend:
     build: ./backend
-    # command: uvicorn app.main:app --proxy-headers --host 0.0.0.0 --port 80 --reload # for development
     ports:
       - 8000:80
     environment:
@@ -11,11 +10,9 @@ services:
       - POKEMANTLE_PRODUCTION=True
     volumes:
       - ./data:/data
-      # - ./backend/app:/app/app # for development
   frontend:
     build: ./frontend
-    # volumes:
-    #   - ./frontend:/home/node/app # for development
     ports:
-      - 80:3000
-      # - 3000:3000 # for development
+      - 3000:80
+    environment:
+      - POKEMANTLE_PRODUCTION=True
