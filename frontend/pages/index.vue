@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container max-w-xl mx-auto">
     <MenuBar />
     <GuessInput />
     <GuessResult />

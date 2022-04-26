@@ -65,3 +65,10 @@ interface GuessResult {
   rank: number
   similarity: number
 }
+
+interface GuessData {
+  index: number
+  name: string
+  rank: number
+  similarity: number
+}

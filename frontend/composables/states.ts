@@ -4,12 +4,12 @@ export const state = reactive<{
   puzzle_number: number;
   pokemons: Pokemon[];
   pokemon_name_map: LocalName[];
-  guess_results: GuessResult[];
+  guess_data_list: GuessData[];
   locale: string;
 }>({
   puzzle_number: 0,
   pokemons: [],
   pokemon_name_map: [],
-  guess_results: [],
+  guess_data_list: [],
   locale: 'en',
 })
