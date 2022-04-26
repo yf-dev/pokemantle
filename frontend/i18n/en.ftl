@@ -1,4 +1,4 @@
-pokemantle = Pokémantle
+pokemantle = Pokémantle #{$puzzle_number}
 
 language-locale-en = English
 language-locale-ko = 한국어
@@ -14,3 +14,5 @@ guess-result-header-index = #
 guess-result-header-name = Name
 guess-result-header-similarity = Similarity
 guess-result-header-rank = Rank
+
+correct-guess = Found!

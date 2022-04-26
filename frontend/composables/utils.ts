@@ -20,14 +20,14 @@ export const getLocale = () => {
 export const changeLocale = (locale: string) => {
   if (isValidFluentLocale) {
     changeFluentLocale(locale)
-    apiPokemonNameMap(locale).then((data) => state.pokemon_name_map = data)
+    apiPokemonNameMap(locale).then((data) => api_data.pokemon_name_map = data)
   }
 }
 
 export const translatePokemonName = (name: string, to_eng: boolean): string | undefined => {
   if (to_eng) {
-    return state.pokemon_name_map.find(localname => localname.local_name === name)?.english_name;
+    return api_data.pokemon_name_map.find(localname => localname.local_name === name)?.english_name;
   } else {
-    return state.pokemon_name_map.find(localname => localname.english_name === name)?.local_name;
+    return api_data.pokemon_name_map.find(localname => localname.english_name === name)?.local_name;
   }
 }

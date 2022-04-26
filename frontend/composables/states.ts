@@ -2,14 +2,44 @@ export const api_base = ref("")
 
 export const state = reactive<{
   puzzle_number: number;
-  pokemons: Pokemon[];
-  pokemon_name_map: LocalName[];
   guess_data_list: GuessData[];
+  last_guess_data: GuessData | undefined;
   locale: string;
 }>({
   puzzle_number: 0,
-  pokemons: [],
-  pokemon_name_map: [],
   guess_data_list: [],
+  last_guess_data: undefined,
   locale: 'en',
 })
+
+export const api_data = reactive<{
+  pokemons: Pokemon[];
+  pokemon_name_map: LocalName[];
+}>({
+  pokemons: [],
+  pokemon_name_map: [],
+})
+
+export const saveGuessDataList = (guess_data_list: GuessData[]) => {
+  if (typeof window !== "undefined") {
+    localStorage.setItem('guess_data_list', JSON.stringify(guess_data_list))
+  }
+}
+
+export const savePuzzleNumber = (puzzle_number: number) => {
+  if (typeof window !== "undefined") {
+    localStorage.setItem('puzzle_number', puzzle_number.toString())
+  }
+}
+
+export const loadGuessDataList = (): GuessData[] => {
+  if (typeof window !== "undefined") {
+    return JSON.parse(localStorage.getItem('guess_data_list') || "[]")
+  }
+}
+
+export const loadPuzzleNumber = (): number => {
+  if (typeof window !== "undefined") {
+    return parseInt(localStorage.getItem('puzzle_number') || state.puzzle_number.toString())
+  }
+}

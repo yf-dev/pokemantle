@@ -37,12 +37,9 @@
       </tr>
     </thead>
     <tbody class="divide-y divide-gray-100">
-      <tr v-for="guess_data in sortedGuessDataList">
-        <td class="p-2">{{ guess_data.index + 1 }}</td>
-        <td class="p-2">{{ translatePokemonName(guess_data.name, false) }}</td>
-        <td class="p-2">{{ (guess_data.similarity * 100).toFixed(2) }}</td>
-        <td class="p-2">{{ guess_data.rank }}</td>
-      </tr>
+      <GuessResultRow v-if="is_fixed_last && state.last_guess_data !== undefined" :guess_data="state.last_guess_data">
+      </GuessResultRow>
+      <GuessResultRow v-for="guess_data in sortedGuessDataList" :guess_data="guess_data"></GuessResultRow>
     </tbody>
   </table>
 </template>
@@ -52,9 +49,17 @@ import { state, translatePokemonName } from '#imports'
 
 const is_sort_asc = ref(true)
 const sort_key = ref("rank")
+const is_fixed_last = ref(true)
+
+const filteredGuessDataList = computed(() => {
+  if (is_fixed_last.value && state.last_guess_data !== undefined) {
+    return state.guess_data_list.filter((v) => { return v.index !== state.last_guess_data.index })
+  }
+  return [...state.guess_data_list]
+})
 
 const sortedGuessDataList = computed(() => {
-  return [...state.guess_data_list].sort((a, b) => {
+  return filteredGuessDataList.value.sort((a, b) => {
     const a_data = sort_key.value === 'name' ? translatePokemonName(a[sort_key.value], false) : a[sort_key.value]
     const b_data = sort_key.value === 'name' ? translatePokemonName(b[sort_key.value], false) : b[sort_key.value]
     const comp = typeof a_data === 'string' ? a_data.localeCompare(b_data) : a_data - b_data;
@@ -63,6 +68,7 @@ const sortedGuessDataList = computed(() => {
 })
 
 function changeSort(key: string) {
+  is_fixed_last.value = false
   if (key === sort_key.value) {
     is_sort_asc.value = !is_sort_asc.value
     return
@@ -70,5 +76,9 @@ function changeSort(key: string) {
   is_sort_asc.value = true
   sort_key.value = key
 }
+
+watch(() => state.last_guess_data, () => {
+  is_fixed_last.value = true
+})
 
 </script>
