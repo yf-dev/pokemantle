@@ -15,4 +15,5 @@ services:
     ports:
       - 3000:80
     environment:
+      - NUXT_PUBLIC_API_BASE=http://localhost:8000
       - POKEMANTLE_PRODUCTION=True

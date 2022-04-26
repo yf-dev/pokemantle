@@ -2,9 +2,12 @@ FROM node:17-alpine AS builder
 
 RUN mkdir -p /home/node/app
 WORKDIR /home/node/app
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
 COPY . .
 
-RUN npm ci
 RUN npm run build
 
 FROM node:17-alpine AS runner
