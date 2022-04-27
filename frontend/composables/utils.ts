@@ -6,15 +6,17 @@ export const todayPuzzleNumber = () => {
 }
 
 export const getLocale = () => {
+  let lang: string;
   if (typeof window !== "undefined") {
     if (window.navigator.languages && window.navigator.languages.length) {
-      return window.navigator.languages[0];
+      lang = window.navigator.languages[0].split('-')[0]
     } else {
-      return window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage || 'en';
+      lang = window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage || 'en'
     }
   } else {
-    return 'en';
+    lang = 'en'
   }
+  return lang.split('-')[0]
 }
 
 export const changeLocale = (locale: string) => {
