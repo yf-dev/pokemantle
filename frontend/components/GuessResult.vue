@@ -1,5 +1,6 @@
 <template>
-  <table class="mx-auto mt-4 w-full max-w-xl divide-y divide-gray-200">
+
+  <table class="mt-4 w-full max-w-xl divide-y divide-gray-200">
     <thead>
       <tr class="text-left whitespace-nowrap text-gray-900">
         <th class="p-2">
@@ -37,9 +38,11 @@
       </tr>
     </thead>
     <tbody class="divide-y divide-gray-100">
-      <GuessResultRow v-if="is_fixed_last && state.last_guess_data !== undefined" :guess_data="state.last_guess_data">
-      </GuessResultRow>
-      <GuessResultRow v-for="guess_data in sortedGuessDataList" :guess_data="guess_data"></GuessResultRow>
+      <ClientOnly fallbackTag="tr">
+        <GuessResultRow v-if="is_fixed_last && state.last_guess_data !== undefined" :guess_data="state.last_guess_data">
+        </GuessResultRow>
+        <GuessResultRow v-for="guess_data in sortedGuessDataList" :guess_data="guess_data"></GuessResultRow>
+      </ClientOnly>
     </tbody>
   </table>
 </template>
@@ -53,7 +56,7 @@ const is_fixed_last = ref(true)
 
 const filteredGuessDataList = computed(() => {
   if (is_fixed_last.value && state.last_guess_data !== undefined) {
-    return state.guess_data_list.filter((v) => { return v.index !== state.last_guess_data.index })
+    return state.guess_data_list.filter((v) => v.index !== state.last_guess_data.index)
   }
   return [...state.guess_data_list]
 })

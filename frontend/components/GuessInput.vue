@@ -5,7 +5,7 @@
     </div>
     <div class="flex items-center justify-center w-full">
       <div class="flex-shrink w-full relative">
-        <input v-t:guess-input-input type="text" class="w-full p-2 border-2 border-gray-200 rounded" :value="name"
+        <input v-t:guess-input-input type="text" class="w-full p-2 border border-gray-200 rounded" :value="name"
           ref="nameInput" @input="debouncedNameInput" @keydown.enter="guess" />
         <ul v-if="!isCloseAutocomplete && fuzzyPokemonNameMap.length > 0"
           class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded py-1 ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none text-sm">
@@ -18,7 +18,7 @@
         </ul>
       </div>
       <button v-t:guess-input-button
-        class="inline-flex flex-shrink-0 ml-1 py-2 px-3 font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
+        class="inline-flex flex-shrink-0 ml-1 py-2 px-3 font-medium text-white bg-indigo-600 border border-indigo-600 rounded shadow-sm active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
         @click="guess"></button>
     </div>
   </div>
@@ -52,6 +52,7 @@ async function guess() {
     const data = await apiGuess(state.puzzle_number, eng_name)
     state.last_guess_data = addGuessResult(data)
     name.value = ""
+    updateStatistics()
   } catch (e) {
     if (e instanceof FetchError) {
       error_message.value = "error-no-such-pokemon"
@@ -95,5 +96,24 @@ function autocompleteItemClicked(name_item: LocalName) {
   name.value = name_item.local_name
   isCloseAutocomplete.value = true
   nameInput.value?.focus()
+}
+
+function updateStatistics() {
+  if (state.last_guess_data.rank === 0 && statistics.last_puzzle_number !== state.puzzle_number) {
+    statistics.clear_count += 1
+    statistics.last_guess_count = state.guess_data_list.length
+    statistics.total_guess_count += statistics.last_guess_count
+    const best = state.guess_data_list.length > 1 ? state.guess_data_list.sort((a, b) => a.rank - b.rank)[1] : state.guess_data_list[0]
+    statistics.last_best_rank = best.rank
+    statistics.last_best_similarity = best.similarity
+    if (statistics.last_puzzle_number === (state.puzzle_number - 1)) {
+      statistics.streak += 1
+    }
+    if (statistics.streak > statistics.best_streak) {
+      statistics.best_streak = statistics.streak
+    }
+    statistics.last_puzzle_number = state.puzzle_number
+    saveStatistics()
+  }
 }
 </script>
