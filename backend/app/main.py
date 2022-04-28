@@ -143,7 +143,7 @@ async def guess(
         similarity_vector=SIMILARITY_VECTOR,
     )
     for guess_result in ranks:
-        if guess_result.name == name:
+        if guess_result.name.lower() == name.lower():
             return guess_result
     return JSONResponse(
         status_code=404,

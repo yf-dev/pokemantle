@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './assets/**/*.css',
@@ -11,7 +13,11 @@ module.exports = {
     // './nuxt.config.{js,ts}',
   ],
   theme: {
-    extend: {},
+    screens: {
+      'zs': '320px',
+      'xs': '475px',
+      ...defaultTheme.screens,
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

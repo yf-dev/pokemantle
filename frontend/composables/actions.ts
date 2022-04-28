@@ -9,3 +9,19 @@ export const addGuessResult = (guess_result: GuessResult): GuessData => {
   saveGuessDataList(state.guess_data_list)
   return guess_data
 }
+
+export const changeLocale = (locale: string) => {
+  if (isValidFluentLocale) {
+    changeFluentLocale(locale)
+    apiPokemonNameMap(locale).then((data) => api_data.pokemon_name_map = data)
+  }
+}
+
+export const translatePokemonName = (name: string, to_eng: boolean): string | undefined => {
+  const lowercased_name = name.toLowerCase()
+  if (to_eng) {
+    return api_data.pokemon_name_map.find(localname => localname.local_name.toLowerCase() === lowercased_name)?.english_name;
+  } else {
+    return api_data.pokemon_name_map.find(localname => localname.english_name.toLowerCase() === lowercased_name)?.local_name;
+  }
+}

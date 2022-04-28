@@ -1,3 +1,5 @@
+import parser from 'accept-language-parser'
+
 export const todayPuzzleNumber = () => {
   const origin = new Date("2022-04-20T00:00:00")
   const today = new Date()
@@ -5,7 +7,7 @@ export const todayPuzzleNumber = () => {
   return days
 }
 
-export const getLocale = () => {
+export const getLocale = (): string => {
   let lang: string;
   if (typeof window !== "undefined") {
     if (window.navigator.languages && window.navigator.languages.length) {
@@ -14,22 +16,12 @@ export const getLocale = () => {
       lang = window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage || 'en'
     }
   } else {
-    lang = 'en'
+    const accept_language: string | undefined = useRequestHeaders(['accept-language'])['accept-language']
+    if (accept_language !== undefined) {
+      lang = parser.pick(Object.keys(fluentBundles), accept_language, { loose: true });
+    } else {
+      lang = 'en'
+    }
   }
   return lang.split('-')[0]
-}
-
-export const changeLocale = (locale: string) => {
-  if (isValidFluentLocale) {
-    changeFluentLocale(locale)
-    apiPokemonNameMap(locale).then((data) => api_data.pokemon_name_map = data)
-  }
-}
-
-export const translatePokemonName = (name: string, to_eng: boolean): string | undefined => {
-  if (to_eng) {
-    return api_data.pokemon_name_map.find(localname => localname.local_name === name)?.english_name;
-  } else {
-    return api_data.pokemon_name_map.find(localname => localname.english_name === name)?.local_name;
-  }
 }
