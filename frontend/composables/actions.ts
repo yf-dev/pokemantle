@@ -18,9 +18,10 @@ export const changeLocale = (locale: string) => {
 }
 
 export const translatePokemonName = (name: string, to_eng: boolean): string | undefined => {
+  const lowercased_name = name.toLowerCase()
   if (to_eng) {
-    return api_data.pokemon_name_map.find(localname => localname.local_name === name)?.english_name;
+    return api_data.pokemon_name_map.find(localname => localname.local_name.toLowerCase() === lowercased_name)?.english_name;
   } else {
-    return api_data.pokemon_name_map.find(localname => localname.english_name === name)?.local_name;
+    return api_data.pokemon_name_map.find(localname => localname.english_name.toLowerCase() === lowercased_name)?.local_name;
   }
 }

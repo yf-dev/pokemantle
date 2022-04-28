@@ -72,17 +72,17 @@ const fuzzyPokemonNameMap = computed(() => {
   }
   const searcher = nameSearcher(text)
   const result = api_data.pokemon_name_map.filter((v) => {
-    return searcher.test(v.local_name.normalize('NFD'));
+    return searcher.test(v.local_name.toLowerCase().normalize('NFD'));
   })
   return result
 })
 
-function nameSearcher(text) {
-  const pattern = text.split('').map(escapeRegExp).join('');
+function nameSearcher(text: string) {
+  const pattern = text.toLowerCase().split('').map(escapeRegExp).join('');
   return new RegExp(pattern);
 }
 
-function escapeRegExp(text) {
+function escapeRegExp(text: string) {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
