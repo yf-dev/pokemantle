@@ -10,11 +10,11 @@
 </template>
 
 <script setup lang="ts">
-const title = fluent.format('pokemantle-with-number', { puzzle_number: state.puzzle_number })
+const title = fluent.format('pokemantle')
 useHead({
   title: title,
   meta: [
-    { name: 'og:title', content: fluent.format('pokemantle-with-number', { puzzle_number: state.puzzle_number }) },
+    { name: 'og:title', content: title },
     { name: 'og:type', content: 'website' },
   ]
 })
