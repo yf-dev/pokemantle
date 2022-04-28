@@ -6,9 +6,8 @@ Pokémon guessing game inspired by [Semantle](https://semantle.novalis.org/)
 # Start server
 
 ```bash
-docker-compose up
+docker-compose up # http://localhost:3000/
 ```
-
 
 # Data source
 

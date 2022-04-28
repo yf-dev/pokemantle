@@ -9,11 +9,4 @@
 
 <script setup lang="ts">
 import { state, fluentBundles } from '#imports'
-
-watch(() => state.locale, (newLocale, _) => {
-  changeLocale(newLocale)
-})
-
-state.locale = getLocale()
-
 </script>
