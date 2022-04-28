@@ -10,5 +10,13 @@
 </template>
 
 <script setup lang="ts">
+const title = fluent.format('pokemantle-with-number', { puzzle_number: state.puzzle_number })
+useHead({
+  title: title,
+  meta: [
+    { name: 'og:title', content: fluent.format('pokemantle-with-number', { puzzle_number: state.puzzle_number }) },
+    { name: 'og:type', content: 'website' },
+  ]
+})
 const isFinished = computed(() => state.guess_data_list.find((v) => v.rank === 0) !== undefined)
 </script>
