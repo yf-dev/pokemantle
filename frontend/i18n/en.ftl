@@ -45,5 +45,4 @@ share-clipboard-text = Pokémantle #{$puzzle_number} Solved!
     [few] {$guess_count}rd place
     *[other] {$guess_count}th place
   }.
-  {$url}
 share-clipboard-text-alert = The results have been copied to clipboard.

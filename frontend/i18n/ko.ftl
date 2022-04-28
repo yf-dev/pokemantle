@@ -35,5 +35,4 @@ share-button = 공유하기
 share-clipboard-text = Pokémantle #{$puzzle_number} 성공!
   {$guess_count}번째 추측에서 포켓몬을 맞췄습니다.
   가장 유사한 추측의 순위는 {$best_rank}위이며, 유사도는 {$best_similarity}입니다.
-  {$url}
 share-clipboard-text-alert = 결과를 클립보드에 복사했습니다.

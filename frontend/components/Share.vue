@@ -69,8 +69,7 @@ function copyToClipboard() {
     guess_count: statistics.last_guess_count,
     best_rank: statistics.last_best_rank,
     best_similarity: statistics.last_best_similarity,
-    url: window.location.href,
-  }));
+  }) + '\n' + window.location.href);
   alert(fluent.format('share-clipboard-text-alert'))
 }
 </script>
