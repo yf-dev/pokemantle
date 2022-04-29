@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { trackRouter } from "vue-gtag-next"
+import { trackRouter, useState } from "vue-gtag-next"
 
 const config = useRuntimeConfig()
 api_base.value = config.public.apiBase
@@ -34,6 +34,11 @@ if (loaded_puzzle_number === state.puzzle_number) {
   state.guess_data_list = loadGuessDataList()
 }
 
-const router = useRouter()
-trackRouter(router)
+if (process.env.NODE_ENV === 'production') {
+  const router = useRouter()
+  trackRouter(router)
+  useState().property.value = {
+    id: config.public.gtagId
+  }
+}
 </script>
