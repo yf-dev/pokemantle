@@ -1,6 +1,8 @@
 Pokémantle
 ==========
 
+https://pokemantle.update.sh/
+
 Pokémon guessing game inspired by [Semantle](https://semantle.novalis.org/)
 
 # Start server
