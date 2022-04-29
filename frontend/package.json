@@ -9,11 +9,12 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^5.0.2",
+    "@nuxtjs/tailwindcss": "^5.0.3",
     "@tailwindcss/forms": "^0.5.0",
     "nuxt": "^3.0.0-rc.1",
     "prettier": "^2.6.2",
-    "rollup-plugin-fluent-vue": "^3.0.1"
+    "rollup-plugin-fluent-vue": "^3.0.1",
+    "vue-gtag-next": "^1.14.0"
   },
   "dependencies": {
     "@fluent/bundle": "^0.17.1",
@@ -22,3 +23,4 @@
     "lodash": "^4.17.21"
   }
 }
+

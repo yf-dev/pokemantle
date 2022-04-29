@@ -5,6 +5,8 @@
 </template>
 
 <script setup lang="ts">
+import { trackRouter } from "vue-gtag-next"
+
 const config = useRuntimeConfig()
 api_base.value = config.public.apiBase
 
@@ -15,7 +17,7 @@ watchEffect(async () => {
 
 state.puzzle_number = todayPuzzleNumber()
 
-apiPokemons().then(data => api_data.pokemons = data)
+apiPokemons().then((data) => (api_data.pokemons = data))
 
 const loaded_statistics = loadStatistics()
 statistics.last_puzzle_number = loaded_statistics.last_puzzle_number
@@ -31,4 +33,7 @@ const loaded_puzzle_number = loadPuzzleNumber()
 if (loaded_puzzle_number === state.puzzle_number) {
   state.guess_data_list = loadGuessDataList()
 }
+
+const router = useRouter()
+trackRouter(router)
 </script>
