@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      frontendBase: 'http://localhost:3000',
       apiBase: 'http://localhost:8000',
       gtagId: 'GA_MEASUREMENT_ID',
     }

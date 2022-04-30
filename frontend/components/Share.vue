@@ -64,12 +64,13 @@
 import { state, statistics } from '#imports'
 
 function copyToClipboard() {
+  const url = typeof window !== "undefined" ? window.location.href : useRuntimeConfig().public.frontendBase + useRoute().fullPath
   navigator.clipboard.writeText(fluent.format('share-clipboard-text', {
     puzzle_number: state.puzzle_number,
     guess_count: statistics.last_guess_count,
     best_rank: statistics.last_best_rank,
     best_similarity: statistics.last_best_similarity,
-  }) + '\n' + window.location.href).then(() => {
+  }) + '\n' + url).then(() => {
     alert(fluent.format('share-clipboard-text-alert'))
   })
 }

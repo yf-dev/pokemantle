@@ -19,18 +19,22 @@
       {{ $t('faq-sort-description') }}
     </FaqItem>
     <FaqItem :title="$t('faq-source-code-title')">
-      <i18n path="faq-source-code-description">
-        <template #source_code_link="{ sourceCodeLinkLabel }">
-          <a target="_blank" href="https://github.com/yf-dev/pokemantle">{{ sourceCodeLinkLabel }}</a>
-        </template>
-      </i18n>
+      <ClientOnly>
+        <i18n path="faq-source-code-description">
+          <template #source_code_link="{ sourceCodeLinkLabel }">
+            <a target="_blank" href="https://github.com/yf-dev/pokemantle">{{ sourceCodeLinkLabel }}</a>
+          </template>
+        </i18n>
+      </ClientOnly>
     </FaqItem>
     <FaqItem :title="$t('faq-issue-title')">
-      <i18n path="faq-issue-description">
-        <template #issue_link="{ issueLinkLabel }">
-          <a target="_blank" href="https://github.com/yf-dev/pokemantle/issues">{{ issueLinkLabel }}</a>
-        </template>
-      </i18n>
+      <ClientOnly>
+        <i18n path="faq-issue-description">
+          <template #issue_link="{ issueLinkLabel }">
+            <a target="_blank" href="https://github.com/yf-dev/pokemantle/issues">{{ issueLinkLabel }}</a>
+          </template>
+        </i18n>
+      </ClientOnly>
     </FaqItem>
   </div>
 </template>
