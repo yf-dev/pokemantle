@@ -23,12 +23,17 @@ if "POKEMANTLE_POKEDEX" not in os.environ:
 if "POKEMANTLE_NAME_MAP" not in os.environ:
     raise Exception("environment variable POKEMANTLE_NAME_MAP is not defined")
 
+if "POKEMANTLE_OLD_SECRET" not in os.environ:
+    raise Exception("environment variable POKEMANTLE_OLD_SECRET is not defined")
+
 RANDOM = Random(os.environ.get("POKEMANTLE_RANDOM_SEED", 20220428))
 
 POKEDEX = pd.read_csv(os.environ["POKEMANTLE_POKEDEX"]).replace({np.nan: None})
 POKEMON_NAME_MAP = pd.read_csv(os.environ["POKEMANTLE_NAME_MAP"])
+OLD_SECRET = pd.read_csv(os.environ["POKEMANTLE_OLD_SECRET"], index_col="puzzle_number")
 
 POKEMON_SIZE = len(POKEDEX.index)
+OLD_SECRET_SIZE = len(OLD_SECRET.index)
 SECRET_INDEXES = RANDOM.sample(range(POKEMON_SIZE), k=POKEMON_SIZE)
 SIMILARITY_VECTOR = calculate_similarity_vector(
     feature_vector=create_feature_vector(pokedex=POKEDEX)
@@ -50,7 +55,9 @@ if not os.environ.get("POKEMANTLE_PRODUCTION", False):
 
 
 def secret_index(puzzle_number: int) -> int:
-    print(puzzle_number % POKEMON_SIZE)
+    if puzzle_number <= OLD_SECRET_SIZE:
+        name = OLD_SECRET.loc[puzzle_number]["name"]
+        return POKEDEX.index[POKEDEX["name"] == name].tolist()[0]
     return SECRET_INDEXES[puzzle_number % POKEMON_SIZE]
 
 
