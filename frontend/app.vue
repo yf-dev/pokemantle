@@ -34,7 +34,7 @@ if (loaded_puzzle_number === state.puzzle_number) {
   state.guess_data_list = loadGuessDataList()
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production' && typeof window !== "undefined") {
   const router = useRouter()
   trackRouter(router)
   useState().property.value = {
