@@ -48,6 +48,8 @@ show-rank-list-button = 전체 순위 보기
 faq-what-it-is-title = {pokemantle}이 뭔가요?
 faq-what-it-is-description = {pokemantle}은 오늘의 포켓몬을 맞추는 게임입니다.
   오늘의 포켓몬을 추측하면, 추측한 포켓몬이 정답 포켓몬과 얼마나 비슷한지 알려줍니다.
+  {pokemantle}은 {$semantle_link}에서 영감을 받아 만들어졌습니다.
+  .semantle-link-label = Semantle
 
 faq-generation-title = 어떤 포켓몬이 포함되어 있나요?
 faq-generation-description = 포켓몬스터 소드 · 실드 까지 등장한 포켓몬을 모두 포함하며, 서로 다른 특징을 가지는 폼체인지 등은 별도의 포켓몬으로 취급하여 총 {$number} 가지입니다. 
@@ -68,10 +70,10 @@ faq-sort-description = 네. 추측 목록 상단 헤더를 클릭하여 정렬 �
 
 faq-source-code-title = 소스 코드를 확인할 수 있나요?
 faq-source-code-description = {$source_code_link}에서 확인할 수 있습니다.
-  .source-code-link-label = {pokemantle} 깃헙
+  .source-code-link-label = {pokemantle} Github
 
 faq-issue-title = 다른 질문이나 피드백은 어떻게 보내나요?
 faq-issue-description = {$issue_link}에서 문의해주세요.
-  .issue-link-label = {pokemantle} 깃헙 이슈
+  .issue-link-label = {pokemantle} Github 이슈
 
 go-back-to-main = 메인 페이지로 돌아가기

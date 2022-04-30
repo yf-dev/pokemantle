@@ -56,8 +56,9 @@ share-clipboard-text-alert = The results have been copied to clipboard.
 show-rank-list-button = Show all ranks
 
 faq-what-it-is-title = What is {pokemantle}?
-faq-what-it-is-description = {pokemantle} is the game to guess today's Pokémon.
+faq-what-it-is-description = {pokemantle} is the game to guess today's Pokémon inspired by {$semantle_link}.
   If you guess today's Pokémon, {pokemantle} tells you how similar it is to the answer.
+  .semantle-link-label = Semantle
 
 faq-generation-title = What Pokémon are included?
 faq-generation-description = It includes all Pokémon that have appeared in Pokémon Sword and Shield, and form differences with different characteristics are treated as separate Pokémon, so there are a total of {$number}.

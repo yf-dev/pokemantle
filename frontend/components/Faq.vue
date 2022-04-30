@@ -1,7 +1,15 @@
 <template>
   <div class="space-y-4">
     <FaqItem :title="$t('faq-what-it-is-title')" open>
-      {{ $t('faq-what-it-is-description') }}
+      <ClientOnly>
+        <i18n path="faq-what-it-is-description">
+          <template #semantle_link="{ semantleLinkLabel }">
+            <a target="_blank" href="https://semantle.novalis.org/" class="text-blue-600">{{
+                semantleLinkLabel
+            }}</a>
+          </template>
+        </i18n>
+      </ClientOnly>
     </FaqItem>
     <FaqItem :title="$t('faq-generation-title')">
       {{ $t('faq-generation-description', { number: api_data.pokemons.length }) }}
@@ -13,7 +21,7 @@
       {{ $t('faq-once-per-day-description') }}
     </FaqItem>
     <FaqItem :title="$t('faq-yesterday-title')">
-      {{ $t('faq-yesterday-description', { name: 'test' }) }}
+      {{ $t('faq-yesterday-description', { name: translatePokemonName(yesterdayName, false) }) }}
     </FaqItem>
     <FaqItem :title="$t('faq-sort-title')">
       {{ $t('faq-sort-description') }}
@@ -43,5 +51,7 @@
 </template>
 
 <script setup lang="ts">
-import { api_data } from '#imports'
+import { api_data, translatePokemonName } from '#imports'
+
+const yesterdayName = (await apiRank(state.puzzle_number - 1))[0].name
 </script>
