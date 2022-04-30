@@ -8,6 +8,7 @@ services:
     environment:
       - POKEMANTLE_POKEDEX=/data/pokedex.csv
       - POKEMANTLE_NAME_MAP=/data/name_map.csv
+      - POKEMANTLE_OLD_SECRET=/data/old_secret.csv
     volumes:
       - ./data:/data
       - ./backend/app:/app/app
