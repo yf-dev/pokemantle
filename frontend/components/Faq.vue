@@ -21,7 +21,16 @@
       {{ $t('faq-once-per-day-description') }}
     </FaqItem>
     <FaqItem :title="$t('faq-yesterday-title')">
-      {{ $t('faq-yesterday-description', { name: translatePokemonName(yesterdayName, false) }) }}
+      <ClientOnly>
+        <i18n path="faq-yesterday-description" :args="{ name: translatePokemonName(yesterdayName, false) }">
+          <template #yesterday_rank_link="{ yesterdayRankLinkLabel }">
+            <NuxtLink :to="`/rank/${state.puzzle_number - 1}/${utf8ToB64(yesterdayName)}`" class="text-blue-600">{{
+                yesterdayRankLinkLabel
+            }}
+            </NuxtLink>
+          </template>
+        </i18n>
+      </ClientOnly>
     </FaqItem>
     <FaqItem :title="$t('faq-sort-title')">
       {{ $t('faq-sort-description') }}
@@ -51,7 +60,7 @@
 </template>
 
 <script setup lang="ts">
-import { api_data, translatePokemonName } from '#imports'
+import { state, api_data, translatePokemonName, utf8ToB64 } from '#imports'
 
 const yesterdayName = (await apiRank(state.puzzle_number - 1))[0].name
 </script>

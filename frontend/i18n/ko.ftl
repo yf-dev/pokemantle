@@ -63,7 +63,8 @@ faq-once-per-day-description = 네. 하루에 한 번만 플레이할 수 있습
   저희는 Wordle과 같은 게임의 핵심 요소는 "하루에 한 번만, 모두가 동일한 정답"이라고 생각합니다.
 
 faq-yesterday-title = 어제의 정답은 뭐였나요?
-faq-yesterday-description = {$name} 입니다.
+faq-yesterday-description = {$name} 입니다. 전체 순위 목록은 {$yesterday_rank_link}에서 볼 수 있습니다.
+  .yesterday-rank-link-label = 여기
 
 faq-sort-title = 내 추측을 다른 방식으로 정렬할 수 있나요?
 faq-sort-description = 네. 추측 목록 상단 헤더를 클릭하여 정렬 방식을 변경할 수 있습니다.

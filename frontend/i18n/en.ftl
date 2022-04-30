@@ -72,7 +72,8 @@ faq-once-per-day-description = No. You can only play once a day.
   We think the key to a game like Wordle is "only once a day, everyone has the same answer."
 
 faq-yesterday-title = What was the answer yesterday?
-faq-yesterday-description = {$name}.
+faq-yesterday-description = {$name}. A full list of rankings is available at {$yesterday_rank_link}.
+  .yesterday-rank-link-label = here
 
 faq-sort-title = Can I sort my guesses in a different order?
 faq-sort-description = Yes. You can change the order by clicking on the top header of the guess list.
