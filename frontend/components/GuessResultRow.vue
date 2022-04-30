@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td class="p-2">{{ guess_data.index + 1 }}</td>
+    <td class="p-2" v-if="is_show_index">{{ guess_data.index + 1 }}</td>
     <td class="p-2">{{ translatePokemonName(guess_data.name, false) }}</td>
     <td class="p-2">{{ (guess_data.similarity * 100).toFixed(2) }}</td>
     <td class="p-2"
@@ -15,6 +15,7 @@
 import { translatePokemonName } from '#imports'
 const props = defineProps<{
   guess_data: GuessData
+  is_show_index?: boolean,
 }>()
 const rankPercent = computed(() => {
   return props.guess_data.rank / api_data.pokemons.length * 100

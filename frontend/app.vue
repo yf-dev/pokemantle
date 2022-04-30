@@ -1,6 +1,8 @@
 <template>
   <div>
-    <NuxtPage />
+    <NuxtLayout name="default">
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
 
@@ -24,8 +26,8 @@ statistics.last_puzzle_number = loaded_statistics.last_puzzle_number
 statistics.clear_count = loaded_statistics.clear_count
 statistics.last_guess_count = loaded_statistics.last_guess_count
 statistics.total_guess_count = loaded_statistics.total_guess_count
-statistics.last_best_rank = loaded_statistics.last_best_rank
-statistics.last_best_similarity = loaded_statistics.last_best_similarity
+statistics.last_best_guess = loaded_statistics.last_best_guess
+statistics.last_correct_guess = loaded_statistics.last_correct_guess
 statistics.streak = loaded_statistics.streak
 statistics.best_streak = loaded_statistics.best_streak
 

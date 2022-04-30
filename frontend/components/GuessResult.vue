@@ -3,7 +3,7 @@
   <table class="mt-4 w-full max-w-xl divide-y divide-gray-200">
     <thead>
       <tr class="text-left whitespace-nowrap text-gray-900">
-        <th class="p-2">
+        <th class="p-2" v-if="is_show_index">
           <button class="flex items-center w-full font-bold" @click="changeSort('index')">
             {{ $t('guess-result-header-index') }}
             <ArrowIcon v-if="sort_key === 'index'" class="w-4 h-4 ml-1.5 text-gray-700"
@@ -39,9 +39,11 @@
     </thead>
     <tbody class="divide-y divide-gray-100">
       <ClientOnly fallbackTag="tr">
-        <GuessResultRow v-if="is_fixed_last && state.last_guess_data !== undefined" :guess_data="state.last_guess_data">
+        <GuessResultRow v-if="is_show_fixed_last && is_fixed_last && state.last_guess_data !== undefined"
+          :guess_data="state.last_guess_data" :is_show_index="is_show_index">
         </GuessResultRow>
-        <GuessResultRow v-for="guess_data in sortedGuessDataList" :guess_data="guess_data"></GuessResultRow>
+        <GuessResultRow v-for="guess_data in sortedGuessDataList" :guess_data="guess_data"
+          :is_show_index="is_show_index"></GuessResultRow>
       </ClientOnly>
     </tbody>
   </table>
@@ -50,15 +52,21 @@
 <script setup lang="ts">
 import { state, translatePokemonName } from '#imports'
 
+const props = defineProps<{
+  guess_list: Array<GuessData>,
+  is_show_index?: boolean,
+  is_show_fixed_last?: boolean,
+}>()
+
 const is_sort_asc = ref(true)
 const sort_key = ref("rank")
 const is_fixed_last = ref(true)
 
 const filteredGuessDataList = computed(() => {
   if (is_fixed_last.value && state.last_guess_data !== undefined) {
-    return state.guess_data_list.filter((v) => v.index !== state.last_guess_data.index)
+    return props.guess_list.filter((v) => v.index !== state.last_guess_data.index)
   }
-  return [...state.guess_data_list]
+  return [...props.guess_list]
 })
 
 const sortedGuessDataList = computed(() => {

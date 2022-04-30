@@ -13,15 +13,21 @@ export const addGuessResult = (guess_result: GuessResult): GuessData => {
 export const changeLocale = (locale: string) => {
   if (isValidFluentLocale) {
     changeFluentLocale(locale)
-    apiPokemonNameMap(locale).then((data) => api_data.pokemon_name_map = data)
+    apiPokemonNameMap(locale).then((data) => {
+      api_data.pokemon_local_name_map = new Map()
+      api_data.pokemon_english_name_map = new Map()
+      for (const item of data) {
+        api_data.pokemon_local_name_map[item.local_name.toLowerCase()] = item.english_name
+        api_data.pokemon_english_name_map[item.english_name.toLowerCase()] = item.local_name
+      }
+    })
   }
 }
 
 export const translatePokemonName = (name: string, to_eng: boolean): string | undefined => {
-  const lowercased_name = name.toLowerCase()
   if (to_eng) {
-    return api_data.pokemon_name_map.find(localname => localname.local_name.toLowerCase() === lowercased_name)?.english_name;
+    return api_data.pokemon_local_name_map[name.toLowerCase()];
   } else {
-    return api_data.pokemon_name_map.find(localname => localname.english_name.toLowerCase() === lowercased_name)?.local_name;
+    return api_data.pokemon_english_name_map[name.toLowerCase()];
   }
 }

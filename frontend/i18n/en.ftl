@@ -1,5 +1,6 @@
 pokemantle = Pokémantle
-pokemantle-with-number = {pokemantle} #{$puzzle_number}
+pokemantle-index-subtitle = #{$puzzle_number}
+pokemantle-rank-subtitle = Rank of #{$puzzle_number}
 
 og-description = Guess today's Pokémon! If you type in a Pokémon name, it tells you how close it is.
 
@@ -11,6 +12,8 @@ guess-input-input =
 guess-input-button = Guess
 
 error-no-such-pokemon = No such Pokémon.
+error-no-rank = No such Rank.
+error-invalid-request = This request is not valid.
 error-unknown = Unknown error.
 
 guess-result-header-index = #
@@ -50,6 +53,8 @@ share-clipboard-text = {pokemantle} #{$puzzle_number} Solved!
   }.
 share-clipboard-text-alert = The results have been copied to clipboard.
 
+show-rank-list-button = Show all ranks
+
 faq-what-it-is-title = What is {pokemantle}?
 faq-what-it-is-description = {pokemantle} is the game to guess today's Pokémon.
   If you guess today's Pokémon, {pokemantle} tells you how similar it is to the answer.
@@ -78,3 +83,5 @@ faq-source-code-description = You can check it at the {$source_code_link}.
 faq-issue-title = How can I ask other questions or feedback?
 faq-issue-description = Please contact us on {$issue_link}.
   .issue-link-label = {pokemantle} Github issue page
+
+go-back-to-main = Go back to main page

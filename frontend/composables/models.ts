@@ -72,3 +72,29 @@ interface GuessData {
   rank: number
   similarity: number
 }
+
+interface State {
+  puzzle_number: number;
+  guess_data_list: GuessData[];
+  last_guess_data: GuessData | undefined;
+  locale: string | undefined;
+}
+
+
+interface ApiData {
+  pokemons: Pokemon[];
+  pokemon_local_name_map: Map<string, string>;
+  pokemon_english_name_map: Map<string, string>;
+}
+
+
+interface Statistics {
+  last_puzzle_number: number;
+  clear_count: number;
+  last_guess_count: number;
+  total_guess_count: number;
+  streak: number;
+  best_streak: number;
+  last_correct_guess: undefined | GuessData
+  last_best_guess: undefined | GuessData
+}

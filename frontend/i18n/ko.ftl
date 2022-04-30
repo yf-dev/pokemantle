@@ -1,5 +1,6 @@
 pokemantle = Pokémantle
-pokemantle-with-number = {pokemantle} #{$puzzle_number}
+pokemantle-index-subtitle = #{$puzzle_number}
+pokemantle-rank-subtitle = #{$puzzle_number} 전체 순위
 
 og-description = 오늘의 포켓몬을 맞춰보세요! 포켓몬 이름을 입력하면 정답과 얼마나 비슷한지 알려줍니다.
 
@@ -11,6 +12,8 @@ guess-input-input =
 guess-input-button = 추측하기
 
 error-no-such-pokemon = 잘못된 포켓몬 이름입니다.
+error-no-rank = 잘못된 순위 정보입니다.
+error-invalid-request = 잘못된 요청입니다.
 error-unknown = 알 수 없는 오류입니다.
 
 guess-result-header-index = #
@@ -40,6 +43,8 @@ share-clipboard-text = {pokemantle} #{$puzzle_number} 성공!
   가장 유사한 추측의 순위는 {$best_rank}위이며, 유사도는 {$best_similarity}입니다.
 share-clipboard-text-alert = 결과를 클립보드에 복사했습니다.
 
+show-rank-list-button = 전체 순위 보기
+
 faq-what-it-is-title = {pokemantle}이 뭔가요?
 faq-what-it-is-description = {pokemantle}은 오늘의 포켓몬을 맞추는 게임입니다.
   오늘의 포켓몬을 추측하면, 추측한 포켓몬이 정답 포켓몬과 얼마나 비슷한지 알려줍니다.
@@ -68,3 +73,5 @@ faq-source-code-description = {$source_code_link}에서 확인할 수 있습니�
 faq-issue-title = 다른 질문이나 피드백은 어떻게 보내나요?
 faq-issue-description = {$issue_link}에서 문의해주세요.
   .issue-link-label = {pokemantle} 깃헙 이슈
+
+go-back-to-main = 메인 페이지로 돌아가기

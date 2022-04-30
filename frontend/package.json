@@ -19,8 +19,8 @@
   "dependencies": {
     "@fluent/bundle": "^0.17.1",
     "accept-language-parser": "^1.5.0",
+    "buffer": "^6.0.3",
     "fluent-vue": "^3.0.1",
     "lodash": "^4.17.21"
   }
 }
-

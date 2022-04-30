@@ -1,4 +1,5 @@
 import parser from 'accept-language-parser'
+import { Buffer } from 'buffer'
 
 export const todayPuzzleNumber = () => {
   const origin = new Date("2022-04-28T00:00:00")
@@ -24,4 +25,13 @@ export const getLocale = (): string => {
     }
   }
   return lang.split('-')[0]
+}
+
+
+export const utf8ToB64 = (str: string): string => {
+  return Buffer.from(str, 'utf8').toString('base64');
+}
+
+export const b64ToUtf8 = (str: string): string => {
+  return Buffer.from(str, 'base64').toString('utf8');
 }

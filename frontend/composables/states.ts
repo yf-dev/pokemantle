@@ -1,23 +1,17 @@
 export const api_base = ref("")
 
-export const state = reactive<{
-  puzzle_number: number;
-  guess_data_list: GuessData[];
-  last_guess_data: GuessData | undefined;
-  locale: string | undefined;
-}>({
+export const state = reactive<State>({
   puzzle_number: 0,
   guess_data_list: [],
   last_guess_data: undefined,
   locale: undefined,
 })
 
-export const api_data = reactive<{
-  pokemons: Pokemon[];
-  pokemon_name_map: LocalName[];
-}>({
+
+export const api_data = reactive<ApiData>({
   pokemons: [],
-  pokemon_name_map: [],
+  pokemon_local_name_map: new Map(),
+  pokemon_english_name_map: new Map(),
 })
 
 const default_statistics = {
@@ -25,22 +19,13 @@ const default_statistics = {
   clear_count: 0,
   last_guess_count: 0,
   total_guess_count: 0,
-  last_best_rank: 0,
-  last_best_similarity: 0,
   streak: 0,
   best_streak: 0,
+  last_correct_guess: undefined,
+  last_best_guess: undefined,
 }
 
-export const statistics = reactive<{
-  last_puzzle_number: number;
-  clear_count: number;
-  last_guess_count: number;
-  total_guess_count: number;
-  last_best_rank: number;
-  last_best_similarity: number;
-  streak: number;
-  best_streak: number;
-}>(default_statistics)
+export const statistics = reactive<Statistics>(default_statistics)
 
 export const saveGuessDataList = (guess_data_list: GuessData[]) => {
   if (typeof window !== "undefined") {
@@ -74,9 +59,21 @@ export const loadPuzzleNumber = (): number => {
   return state.puzzle_number
 }
 
-export const loadStatistics = () => {
+export const loadStatistics = (): Statistics => {
   if (typeof window !== "undefined") {
-    return JSON.parse(localStorage.getItem('statistics') || JSON.stringify(default_statistics))
+    const data = JSON.parse(localStorage.getItem('statistics') || JSON.stringify(default_statistics))
+
+    if (typeof data.last_best_rank !== "undefined") {
+      // this is old format. try to convert
+      // TODO: remove this
+      data.last_best_guess = {
+        name: "",
+        rank: data.last_best_rank,
+        similarity: data.last_best_similarity,
+      }
+      data.last_correct_guess = undefined
+    }
+    return data
   }
   return default_statistics
 }
