@@ -5,13 +5,19 @@
     </div>
     <div class="flex items-center justify-center w-full">
       <div class="flex-shrink w-full relative">
-        <input v-t:guess-input-input type="text" class="w-full p-2 border border-gray-200 rounded" :value="name"
-          ref="nameInput" @input="debouncedNameInput" @keydown.enter="guess" />
+        <input v-t:guess-input-input type="text"
+          class="w-full p-2 box-border border-2 border-gray-200 rounded focus:outline-none focus:border-indigo-400 focus:ring-0"
+          :value="name" ref="nameInput" @input="debouncedNameInput" @keydown.enter="guess"
+          @keydown.down.prevent="focusNextAutocompleteButton" @focus="focusedAutocompleteItemIndex = null"
+          @focusout="unfocusInput" />
         <ul v-if="!isCloseAutocomplete && fuzzyPokemonNameMap.length > 0"
-          class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded py-1 ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none text-sm">
-          <li v-for="(name_item, name_item_index) in fuzzyPokemonNameMap" :key="name_item.english_name"
+          class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none text-sm">
+          <li v-for="(name_item, index) in fuzzyPokemonNameMap" :key="name_item.english_name"
             class="text-gray-900 relative">
-            <button class="w-full h-full p-2 text-left" @click="autocompleteItemClicked(name_item)">
+            <button class="w-full h-full p-2 text-left focus:outline-none focus:ring-0 focus:bg-indigo-100"
+              ref="autocompleteButtons" :data-index="index" @focus="focusedAutocompleteItemIndex = index"
+              @keydown.down.prevent="focusNextAutocompleteButton" @keydown.up.prevent="focusPrevAutocompleteButton"
+              @focusout="unfocusInput" @click="autocompleteItemClicked(name_item)">
               <span class="block ml-1 truncate">{{
                   name_item.local_name
               }}</span>
@@ -34,6 +40,8 @@ const name = ref("")
 const error_message = ref("")
 const nameInput = ref<HTMLInputElement | null>(null)
 const isCloseAutocomplete = ref(false)
+const focusedAutocompleteItemIndex = ref<number | null>(null)
+const autocompleteButtons = ref<HTMLButtonElement[]>([])
 
 async function guess() {
   nameInput.value?.focus()
@@ -132,5 +140,36 @@ function updateStatistics() {
     statistics.last_puzzle_number = state.puzzle_number
     saveStatistics()
   }
+}
+
+function getAutocompleteButton(index: number): HTMLButtonElement | undefined {
+  return autocompleteButtons.value.find((v) => parseInt(v.dataset.index, 10) === index)
+}
+
+function focusNextAutocompleteButton() {
+  if (focusedAutocompleteItemIndex.value === null) {
+    getAutocompleteButton(0)?.focus()
+  } else {
+    getAutocompleteButton(focusedAutocompleteItemIndex.value + 1)?.focus()
+  }
+}
+
+function focusPrevAutocompleteButton() {
+  if (focusedAutocompleteItemIndex.value === 0) {
+    nameInput.value.focus()
+  } else {
+    getAutocompleteButton(focusedAutocompleteItemIndex.value - 1)?.focus()
+  }
+}
+
+function unfocusInput(event) {
+  if (event.relatedTarget === nameInput.value) {
+    return
+  }
+  if (autocompleteButtons.value.find((v) => v === event.relatedTarget) !== undefined) {
+    return
+  }
+  isCloseAutocomplete.value = true
+  focusedAutocompleteItemIndex.value = null
 }
 </script>
