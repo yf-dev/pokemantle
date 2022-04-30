@@ -1,6 +1,8 @@
 pokemantle = Pokémantle
 pokemantle-with-number = {pokemantle} #{$puzzle_number}
 
+og-description = Guess today's Pokémon! If you type in a Pokémon name, it tells you how close it is.
+
 language-locale-en = English
 language-locale-ko = 한국어
 
@@ -47,3 +49,32 @@ share-clipboard-text = {pokemantle} #{$puzzle_number} Solved!
     *[other] {$guess_count}th place
   }.
 share-clipboard-text-alert = The results have been copied to clipboard.
+
+faq-what-it-is-title = What is {pokemantle}?
+faq-what-it-is-description = {pokemantle} is the game to guess today's Pokémon.
+  If you guess today's Pokémon, {pokemantle} tells you how similar it is to the answer.
+
+faq-generation-title = What Pokémon are included?
+faq-generation-description = It includes all Pokémon that have appeared in Pokémon Sword and Shield, and form differences with different characteristics are treated as separate Pokémon, so there are a total of {$number}.
+
+faq-similarity-title = How does it calculate the similarity?
+faq-similarity-description = Similarity is calculated based on the characteristics of Pokémon(generation, category, type, ability, stat, height, weight, experience group, regional form, mega evolution, partner, form difference, mythical/legendary, egg group).
+  More precisely, it convert the characteristic to feature vector and calculate cosine similarity.
+
+faq-once-per-day-title = Can I play more than once a day?
+faq-once-per-day-description = No. You can only play once a day.
+  We think the key to a game like Wordle is "only once a day, everyone has the same answer."
+
+faq-yesterday-title = What was the answer yesterday?
+faq-yesterday-description = {$name}.
+
+faq-sort-title = Can I sort my guesses in a different order?
+faq-sort-description = Yes. You can change the order by clicking on the top header of the guess list.
+
+faq-source-code-title = Can I check the source code?
+faq-source-code-description = You can check it at the {$source_code_link}.
+  .source-code-link-label = {pokemantle} Github
+
+faq-issue-title = How can I ask other questions or feedback?
+faq-issue-description = Please contact us on {$issue_link}.
+  .issue-link-label = {pokemantle} Github issue page

@@ -1,6 +1,6 @@
 <template>
   <div class="mb-4 px-4 pt-4 pb-6 bg-white border border-gray-200 rounded shadow-sm">
-    <p class="text-lg font-bold">{{ $t('share-title', { puzzle_number: state.puzzle_number }) }}</p>
+    <p class="text-xl font-bold">{{ $t('share-title', { puzzle_number: state.puzzle_number }) }}</p>
 
     <div class="grid grid-cols-1 zs:grid-cols-2 xs:grid-cols-3 gap-2">
       <div>

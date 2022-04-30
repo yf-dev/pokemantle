@@ -1,0 +1,40 @@
+<template>
+  <div class="space-y-4">
+    <FaqItem :title="$t('faq-what-it-is-title')" open>
+      {{ $t('faq-what-it-is-description') }}
+    </FaqItem>
+    <FaqItem :title="$t('faq-generation-title')">
+      {{ $t('faq-generation-description', { number: api_data.pokemons.length }) }}
+    </FaqItem>
+    <FaqItem :title="$t('faq-similarity-title')">
+      {{ $t('faq-similarity-description') }}
+    </FaqItem>
+    <FaqItem :title="$t('faq-once-per-day-title')">
+      {{ $t('faq-once-per-day-description') }}
+    </FaqItem>
+    <FaqItem :title="$t('faq-yesterday-title')">
+      {{ $t('faq-yesterday-description', { name: 'test' }) }}
+    </FaqItem>
+    <FaqItem :title="$t('faq-sort-title')">
+      {{ $t('faq-sort-description') }}
+    </FaqItem>
+    <FaqItem :title="$t('faq-source-code-title')">
+      <i18n path="faq-source-code-description">
+        <template #source_code_link="{ sourceCodeLinkLabel }">
+          <a target="_blank" href="https://github.com/yf-dev/pokemantle">{{ sourceCodeLinkLabel }}</a>
+        </template>
+      </i18n>
+    </FaqItem>
+    <FaqItem :title="$t('faq-issue-title')">
+      <i18n path="faq-issue-description">
+        <template #issue_link="{ issueLinkLabel }">
+          <a target="_blank" href="https://github.com/yf-dev/pokemantle/issues">{{ issueLinkLabel }}</a>
+        </template>
+      </i18n>
+    </FaqItem>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { api_data } from '#imports'
+</script>
