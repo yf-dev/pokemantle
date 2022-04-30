@@ -590,6 +590,23 @@ pokedex_number,name,generation,status,species,is_galarian,is_alolan,is_mega,is_p
 492,Shaymin Land Forme,4,Mythical,Gratitude Pokémon,0,0,0,0,1,0,1,Grass,,0.2,2.1,1,Natural Cure,,,600,100,100,100,100,100,100,45,100,270,Medium Slow,1,Undiscovered,,,120,1,2,0.5,0.5,0.5,2,1,2,0.5,2,1,2,1,1,1,1,1,1
 492,Shaymin Sky Forme,4,Mythical,Gratitude Pokémon,0,0,0,0,1,1,2,Grass,Flying,0.4,5.2,1,Serene Grace,,,600,100,103,75,120,75,127,45,100,270,Medium Slow,1,Undiscovered,,,120,1,2,0.5,1,0.25,4,0.5,2,0,2,1,1,2,1,1,1,1,1
 493,Arceus,4,Mythical,Alpha Pokémon,0,0,0,0,1,0,1,Normal,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,2,1,1,1,1,1,1,0,1,1,1,1
+493,Arceus Fighting Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Fighting,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,1,1,1,2,2,0.5,0.5,1,1,0.5,1,2
+493,Arceus Flying Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Flying,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,1,1,2,0.5,2,0.5,1,0,1,1,0.5,2,1,1,1,1,1
+493,Arceus Poison Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Poison,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,1,1,1,0.5,1,0.5,0.5,2,1,2,0.5,1,1,1,1,1,0.5
+493,Arceus Ground Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Ground,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,1,2,0,2,2,1,0.5,1,1,1,1,0.5,1,1,1,1,1
+493,Arceus Rock Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Rock,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,0.5,0.5,2,1,2,1,2,0.5,2,0.5,1,1,1,1,1,1,2,1
+493,Arceus Bug Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Bug,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,2,1,1,0.5,1,0.5,1,0.5,2,1,1,2,1,1,1,1,1
+493,Arceus Ghost Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Ghost,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,0,1,1,1,1,1,0,0.5,1,1,1,0.5,1,2,1,2,1,1
+493,Arceus Steel Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Steel,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,0.5,2,1,1,0.5,0.5,2,0,2,0.5,0.5,0.5,0.5,1,0.5,1,0.5,0.5
+493,Arceus Fire Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Fire,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,0.5,2,1,0.5,0.5,1,1,2,1,1,0.5,2,1,1,1,0.5,0.5
+493,Arceus Water Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Water,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,0.5,0.5,2,2,0.5,1,1,1,1,1,1,1,1,1,1,0.5,1
+493,Arceus Grass Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Grass,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,2,0.5,0.5,0.5,2,1,2,0.5,2,1,2,1,1,1,1,1,1
+493,Arceus Electric Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Electric,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,1,1,0.5,1,1,1,1,2,0.5,1,1,1,1,1,1,0.5,1
+493,Arceus Psychic Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Psychic,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,0.5,1,1,1,0.5,2,1,2,1,2,1,1
+493,Arceus Ice Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Ice,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,2,1,1,1,0.5,2,1,1,1,1,1,2,1,1,1,2,1
+493,Arceus Dragon Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Dragon,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,0.5,0.5,0.5,0.5,2,1,1,1,1,1,1,1,1,2,1,1,2
+493,Arceus Dark Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Dark,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,2,1,1,1,0,2,1,0.5,1,0.5,1,2
+493,Arceus Fairy Forme,4,Mythical,Alpha Pokémon,0,0,0,0,1,1,1,Fairy,,3.2,320,1,Multitype,,,720,120,120,120,120,120,120,3,0,324,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,0.5,2,1,1,1,0.5,1,1,0,0.5,2,1
 494,Victini,5,Mythical,Victory Pokémon,0,0,0,0,0,0,2,Psychic,Fire,0.4,4,1,Victory Star,,,600,100,100,100,100,100,100,3,100,270,Slow,1,Undiscovered,,,120,1,0.5,2,1,0.5,0.5,0.5,1,2,1,0.5,1,2,2,1,2,0.5,0.5
 495,Snivy,5,Normal,Grass Snake Pokémon,0,0,0,0,0,0,1,Grass,,0.6,8.1,2,Overgrow,,Contrary,308,45,45,55,45,55,63,45,70,62,Medium Slow,2,Field,Grass,87.5,20,1,2,0.5,0.5,0.5,2,1,2,0.5,2,1,2,1,1,1,1,1,1
 496,Servine,5,Normal,Grass Snake Pokémon,0,0,0,0,0,0,1,Grass,,0.8,16,2,Overgrow,,Contrary,413,60,60,75,60,75,83,45,70,145,Medium Slow,2,Field,Grass,87.5,20,1,2,0.5,0.5,0.5,2,1,2,0.5,2,1,2,1,1,1,1,1,1
@@ -905,6 +922,23 @@ pokedex_number,name,generation,status,species,is_galarian,is_alolan,is_mega,is_p
 771,Pyukumuku,7,Normal,Sea Cucumber Pokémon,0,0,0,0,0,0,1,Water,,0.3,1.2,2,Innards Out,,Unaware,410,55,60,130,30,130,5,60,70,144,Fast,1,Water 1,,50,15,1,0.5,0.5,2,2,0.5,1,1,1,1,1,1,1,1,1,1,0.5,1
 772,Type: Null,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,0,0,1,Normal,,1.9,120.5,1,Battle Armor,,,534,95,95,95,95,95,59,3,0,107,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,2,1,1,1,1,1,1,0,1,1,1,1
 773,Silvally,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,0,1,Normal,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,2,1,1,1,1,1,1,0,1,1,1,1
+773,Silvally Fighting Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Fighting,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,1,1,1,2,2,0.5,0.5,1,1,0.5,1,2
+773,Silvally Flying Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Flying,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,1,1,2,0.5,2,0.5,1,0,1,1,0.5,2,1,1,1,1,1
+773,Silvally Poison Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Poison,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,1,1,1,0.5,1,0.5,0.5,2,1,2,0.5,1,1,1,1,1,0.5
+773,Silvally Ground Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Ground,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,1,2,0,2,2,1,0.5,1,1,1,1,0.5,1,1,1,1,1
+773,Silvally Rock Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Rock,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,0.5,0.5,2,1,2,1,2,0.5,2,0.5,1,1,1,1,1,1,2,1
+773,Silvally Bug Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Bug,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,2,1,1,0.5,1,0.5,1,0.5,2,1,1,2,1,1,1,1,1
+773,Silvally Ghost Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Ghost,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,0,1,1,1,1,1,0,0.5,1,1,1,0.5,1,2,1,2,1,1
+773,Silvally Steel Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Steel,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,0.5,2,1,1,0.5,0.5,2,0,2,0.5,0.5,0.5,0.5,1,0.5,1,0.5,0.5
+773,Silvally Fire Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Fire,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,0.5,2,1,0.5,0.5,1,1,2,1,1,0.5,2,1,1,1,0.5,0.5
+773,Silvally Water Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Water,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,0.5,0.5,2,2,0.5,1,1,1,1,1,1,1,1,1,1,0.5,1
+773,Silvally Grass Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Grass,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,2,0.5,0.5,0.5,2,1,2,0.5,2,1,2,1,1,1,1,1,1
+773,Silvally Electric Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Electric,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,1,1,0.5,1,1,1,1,2,0.5,1,1,1,1,1,1,0.5,1
+773,Silvally Psychic Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Psychic,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,0.5,1,1,1,0.5,2,1,2,1,2,1,1
+773,Silvally Ice Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Ice,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,2,1,1,1,0.5,2,1,1,1,1,1,2,1,1,1,2,1
+773,Silvally Dragon Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Dragon,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,0.5,0.5,0.5,0.5,2,1,1,1,1,1,1,1,1,2,1,1,2
+773,Silvally Dark Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Dark,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,2,1,1,1,0,2,1,0.5,1,0.5,1,2
+773,Silvally Fairy Forme,7,Sub Legendary,Synthetic Pokémon,0,0,0,0,1,1,1,Fairy,,2.3,100.5,1,RKS System,,,570,95,95,95,95,95,95,3,0,257,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,0.5,2,1,1,1,0.5,1,1,0,0.5,2,1
 774,Minior Meteor Form,7,Normal,Meteor Pokémon,0,0,0,0,1,0,2,Rock,Flying,0.3,40,1,Shields Down,,,440,60,60,100,60,100,60,30,70,154,Medium Slow,1,Mineral,,,25,0.5,0.5,2,2,1,2,1,0.5,0,0.5,1,0.5,2,1,1,1,2,1
 774,Minior Core Form,7,Normal,Meteor Pokémon,0,0,0,0,1,1,2,Rock,Flying,0.3,0.3,1,Shields Down,,,500,60,100,60,100,60,120,30,70,175,Medium Slow,1,Mineral,,,25,0.5,0.5,2,2,1,2,1,0.5,0,0.5,1,0.5,2,1,1,1,2,1
 775,Komala,7,Normal,Drowsing Pokémon,0,0,0,0,0,0,1,Normal,,0.4,19.9,1,Comatose,,,480,65,115,65,75,95,65,45,70,168,Slow,1,Field,,50,20,1,1,1,1,1,1,2,1,1,1,1,1,1,0,1,1,1,1
