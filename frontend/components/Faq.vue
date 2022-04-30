@@ -22,7 +22,8 @@
       <ClientOnly>
         <i18n path="faq-source-code-description">
           <template #source_code_link="{ sourceCodeLinkLabel }">
-            <a target="_blank" href="https://github.com/yf-dev/pokemantle">{{ sourceCodeLinkLabel }}</a>
+            <a target="_blank" href="https://github.com/yf-dev/pokemantle" class="text-blue-600">{{ sourceCodeLinkLabel
+            }}</a>
           </template>
         </i18n>
       </ClientOnly>
@@ -31,7 +32,9 @@
       <ClientOnly>
         <i18n path="faq-issue-description">
           <template #issue_link="{ issueLinkLabel }">
-            <a target="_blank" href="https://github.com/yf-dev/pokemantle/issues">{{ issueLinkLabel }}</a>
+            <a target="_blank" href="https://github.com/yf-dev/pokemantle/issues" class="text-blue-600">{{
+                issueLinkLabel
+            }}</a>
           </template>
         </i18n>
       </ClientOnly>
