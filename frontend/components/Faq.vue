@@ -14,6 +14,9 @@
     <FaqItem :title="$t('faq-generation-title')">
       {{ $t('faq-generation-description', { number: api_data.pokemons.length }) }}
     </FaqItem>
+    <FaqItem :title="$t('faq-show-info-title')">
+      {{ $t('faq-show-info-description') }}
+    </FaqItem>
     <FaqItem :title="$t('faq-similarity-title')">
       {{ $t('faq-similarity-description') }}
     </FaqItem>

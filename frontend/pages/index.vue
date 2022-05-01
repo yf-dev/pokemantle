@@ -9,7 +9,7 @@
       <GuessResult :guess_list="state.guess_data_list" :is_show_index="true" :is_show_fixed_last="true"
         v-if="state.guess_data_list.length > 0" />
     </ClientOnly>
-    <Faq class="mt-8" />
+    <Faq class="mt-24" />
   </div>
 </template>
 
