@@ -7,12 +7,13 @@ export const state = reactive<State>({
   locale: undefined,
 })
 
-
-export const api_data = reactive<ApiData>({
+const default_api_data = {
   pokemons: [],
   pokemon_local_name_map: new Map(),
   pokemon_english_name_map: new Map(),
-})
+}
+
+export const api_data = reactive<ApiData>(default_api_data)
 
 const default_statistics = {
   last_puzzle_number: NaN,
@@ -42,6 +43,12 @@ export const savePuzzleNumber = (puzzle_number: number) => {
 export const saveStatistics = () => {
   if (typeof window !== "undefined") {
     localStorage.setItem('statistics', JSON.stringify(statistics))
+  }
+}
+
+export const saveApiData = () => {
+  if (typeof window !== "undefined") {
+    localStorage.setItem('api_data', JSON.stringify(api_data))
   }
 }
 
@@ -76,4 +83,12 @@ export const loadStatistics = (): Statistics => {
     return data
   }
   return default_statistics
+}
+
+export const loadApiData = (): ApiData => {
+  if (typeof window !== "undefined") {
+    const data = JSON.parse(localStorage.getItem('api_data') || JSON.stringify(default_api_data))
+    return data
+  }
+  return default_api_data
 }

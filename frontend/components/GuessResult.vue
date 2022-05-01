@@ -40,10 +40,11 @@
     <tbody class="divide-y divide-gray-100">
       <ClientOnly fallbackTag="tr">
         <GuessResultRow v-if="is_show_fixed_last && is_fixed_last && state.last_guess_data !== undefined"
-          :guess_data="state.last_guess_data" :is_show_index="is_show_index">
+          class="bg-gray-50 border-gray-300 border-y" :guess_data="state.last_guess_data"
+          :is_show_index="is_show_index">
         </GuessResultRow>
         <GuessResultRow v-for="guess_data in sortedGuessDataList" :guess_data="guess_data"
-          :is_show_index="is_show_index"></GuessResultRow>
+          :is_show_index="is_show_index" :key="guess_data.name"></GuessResultRow>
       </ClientOnly>
     </tbody>
   </table>

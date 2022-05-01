@@ -87,3 +87,142 @@ faq-issue-description = Please contact us on {$issue_link}.
   .issue-link-label = {pokemantle} Github issue page
 
 go-back-to-main = Go back to main page
+
+pokemon-info-name = Name: {$name}
+pokemon-info-generation = Generation: {NUMBER($generation, type: "ordinal") ->
+    [one] {$generation}st
+    [two] {$generation}nd
+    [few] {$generation}rd
+    *[other] {$generation}th
+  }
+pokemon-info-species = Species: {$species}
+pokemon-info-height = Height: {$height}m
+pokemon-info-weight = Weight: {$weight}kg
+pokemon-info-growth-rate-label = Growth rate:
+pokemon-info-growth-rate = {$growth_rate ->
+  [NONE] None
+  [Slow] Slow
+  [MediumSlow] Medium Slow
+  [MediumFast] Medium Fast 
+  [Fast] Fast
+  [Fluctuating] Fluctuating
+  [Erratic] Erratic
+  *[other] {$growth_rate}
+}
+pokemon-info-status-label = Status:
+pokemon-info-status = {$status ->
+  [NONE] None
+  [Normal] Normal
+  [SubLegendary] Sub Legendary
+  [Legendary] Legendary
+  [Mythical] Mythical
+  *[other] {$status}
+}
+pokemon-info-type-1-label = Type 1:
+pokemon-info-type-1 = {$type_1 ->
+  [NONE] None
+  [Bug] Bug
+  [Dark] Dark
+  [Dragon] Dragon
+  [Electric] Electric
+  [Fairy] Fairy
+  [Fighting] Fighting
+  [Fire] Fire
+  [Flying] Flying
+  [Ghost] Ghost
+  [Grass] Grass
+  [Ground] Ground
+  [Ice] Ice
+  [Normal] Normal
+  [Poison] Poison
+  [Psychic] Psychic
+  [Rock] Rock
+  [Steel] Steel
+  [Water] Water
+  *[other] {$type_1}
+}
+pokemon-info-type-2-label = Type 2:
+pokemon-info-type-2 = {$type_2 ->
+  [NONE] None
+  [Bug] Bug
+  [Dark] Dark
+  [Dragon] Dragon
+  [Electric] Electric
+  [Fairy] Fairy
+  [Fighting] Fighting
+  [Fire] Fire
+  [Flying] Flying
+  [Ghost] Ghost
+  [Grass] Grass
+  [Ground] Ground
+  [Ice] Ice
+  [Normal] Normal
+  [Poison] Poison
+  [Psychic] Psychic
+  [Rock] Rock
+  [Steel] Steel
+  [Water] Water
+  *[other] {$type_2}
+}
+pokemon-info-ability-1 = Ability 1: {$ability_1 ->
+  [NONE] None
+  *[other] {$ability_1}
+}
+pokemon-info-ability-2 = Ability 2: {$ability_2 ->
+  [NONE] None
+  *[other] {$ability_2}
+}
+pokemon-info-ability-hidden = Hidden Ability: {$ability_hidden ->
+  [NONE] None
+  *[other] {$ability_hidden}
+}
+pokemon-info-hp-speed = HP / SPD: {$hp} / {$speed}
+pokemon-info-attack = ATK / SP. ATK: {$attack} / {$sp_attack}
+pokemon-info-defense = DEF / SP. DEF: {$defense} / {$sp_defense}
+pokemon-info-egg-type-1-label = Egg Type 1:
+pokemon-info-egg-type-1 = {$egg_type_1 ->
+  [NONE] None
+  [Amorphous] Amorphous
+  [Bug] Bug
+  [Ditto] Ditto
+  [Dragon] Dragon
+  [Fairy] Fairy
+  [Field] Field
+  [Flying] Flying
+  [Grass] Grass
+  [Human-Like] Human-Like
+  [Mineral] Mineral
+  [Monster] Monster
+  [Undiscovered] Undiscovered
+  [Water1] Water 1
+  [Water2] Water 2
+  [Water3] Water 3
+  *[other] {$egg_type_1}
+}
+pokemon-info-egg-type-2-label = Egg Type 2:
+pokemon-info-egg-type-2 = {$egg_type_2 ->
+  [NONE] None
+  [Amorphous] Amorphous
+  [Bug] Bug
+  [Ditto] Ditto
+  [Dragon] Dragon
+  [Fairy] Fairy
+  [Field] Field
+  [Flying] Flying
+  [Grass] Grass
+  [Human-Like] Human-Like
+  [Mineral] Mineral
+  [Monster] Monster
+  [Undiscovered] Undiscovered
+  [Water1] Water 1
+  [Water2] Water 2
+  [Water3] Water 3
+  *[other] {$egg_type_2}
+}
+pokemon-info-etc-label = Etc:
+pokemon-info-etc-is-galarian = Galarian
+pokemon-info-etc-is-alolan = Alolan
+pokemon-info-etc-is-mega = Mega
+pokemon-info-etc-is-partner = Partner
+pokemon-info-etc-has-form-difference = Form Difference
+pokemon-info-etc-is-forme-change = Forme Change

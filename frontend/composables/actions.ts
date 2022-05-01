@@ -20,6 +20,7 @@ export const changeLocale = (locale: string) => {
         api_data.pokemon_local_name_map[item.local_name.toLowerCase()] = item.english_name
         api_data.pokemon_english_name_map[item.english_name.toLowerCase()] = item.local_name
       }
+      saveApiData()
     })
   }
 }

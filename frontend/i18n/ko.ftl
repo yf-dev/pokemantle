@@ -55,7 +55,7 @@ faq-generation-title = 어떤 포켓몬이 포함되어 있나요?
 faq-generation-description = 포켓몬스터 소드 · 실드 까지 등장한 포켓몬을 모두 포함하며, 서로 다른 특징을 가지는 폼체인지 등은 별도의 포켓몬으로 취급하여 총 {$number} 가지입니다. 
 
 faq-similarity-title = 유사도는 어떻게 계산하나요?
-faq-similarity-description = 포켓몬의 특징(세대, 분류, 타입, 특성, 종족값, 키, 몸무게, 성장속도, 리전폼, 메가진화, 파트너, 폼체인지, 환상/전설, 알그룹)을 기반으로 유사도를 계산합니다.
+faq-similarity-description = 포켓몬의 특징(세대, 분류, 타입, 특성, 종족값, 키, 몸무게, 경험치 그룹, 리전폼, 메가진화, 파트너, 폼체인지, 환상/전설, 알그룹)을 기반으로 유사도를 계산합니다.
   더 정확하게는 각각의 특징을 벡터로 변환하여 코사인 유사도를 계산합니다.
 
 faq-once-per-day-title = 하루에 한 번 이상 플레이할 수 없나요?
@@ -78,3 +78,137 @@ faq-issue-description = {$issue_link}에서 문의해주세요.
   .issue-link-label = {pokemantle} Github 이슈
 
 go-back-to-main = 메인 페이지로 돌아가기
+
+pokemon-info-name = 이름: {$name}
+pokemon-info-generation = 세대: {$generation}세대
+pokemon-info-species = 분류: {$species}
+pokemon-info-height = 키: {$height}m
+pokemon-info-weight = 몸무게: {$weight}kg
+pokemon-info-growth-rate-label = 경험치 그룹:
+pokemon-info-growth-rate = {$growth_rate ->
+  [NONE] 없음
+  [Slow] 느림
+  [MediumSlow] 중간느림
+  [MediumFast] 중간빠름 
+  [Fast] 빠름
+  [Fluctuating] 불규칙
+  [Erratic] 엄청남
+  *[other] {$growth_rate}
+}
+pokemon-info-status-label = 구분:
+pokemon-info-status = {$status ->
+  [NONE] 없음
+  [Normal] 일반
+  [SubLegendary] 준전설
+  [Legendary] 전설
+  [Mythical] 환상
+  *[other] {$status}
+}
+pokemon-info-type-1-label = 타입1:
+pokemon-info-type-1 = {$type_1 ->
+  [NONE] 없음
+  [Bug] 벌레
+  [Dark] 악
+  [Dragon] 드래곤
+  [Electric] 전기
+  [Fairy] 페어리
+  [Fighting] 격투
+  [Fire] 불꽃
+  [Flying] 비행
+  [Ghost] 고스트
+  [Grass] 풀
+  [Ground] 땅
+  [Ice] 얼음
+  [Normal] 노말
+  [Poison] 독
+  [Psychic] 에스퍼
+  [Rock] 바위
+  [Steel] 강철
+  [Water] 물
+  *[other] {$type_1}
+}
+pokemon-info-type-2-label = 타입2:
+pokemon-info-type-2 = {$type_2 ->
+  [NONE] 없음
+  [Bug] 벌레
+  [Dark] 악
+  [Dragon] 드래곤
+  [Electric] 전기
+  [Fairy] 페어리
+  [Fighting] 격투
+  [Fire] 불꽃
+  [Flying] 비행
+  [Ghost] 고스트
+  [Grass] 풀
+  [Ground] 땅
+  [Ice] 얼음
+  [Normal] 노말
+  [Poison] 독
+  [Psychic] 에스퍼
+  [Rock] 바위
+  [Steel] 강철
+  [Water] 물
+  *[other] {$type_2}
+}
+pokemon-info-ability-1 = 특성1: {$ability_1 ->
+  [NONE] 없음
+  *[other] {$ability_1}
+}
+pokemon-info-ability-2 = 특성2: {$ability_2 ->
+  [NONE] 없음
+  *[other] {$ability_2}
+}
+pokemon-info-ability-hidden = 숨겨진 특성: {$ability_hidden ->
+  [NONE] 없음
+  *[other] {$ability_hidden}
+}
+pokemon-info-hp-speed = 체력 / 스피드: {$hp} / {$speed}
+pokemon-info-attack = 공격 / 특수공격: {$attack} / {$sp_attack}
+pokemon-info-defense = 방어 / 특수방어: {$defense} / {$sp_defense}
+pokemon-info-egg-type-1-label = 알그룹1:
+pokemon-info-egg-type-1 = {$egg_type_1 ->
+  [NONE] 없음
+  [Amorphous] 부정형
+  [Bug] 벌레
+  [Ditto] 메타몽
+  [Dragon] 드래곤
+  [Fairy] 요정
+  [Field] 육상
+  [Flying] 비행
+  [Grass] 식물
+  [Human-Like] 인간형
+  [Mineral] 광물
+  [Monster] 괴수
+  [Undiscovered] 미발견
+  [Water1] 수중1
+  [Water2] 수중2
+  [Water3] 수중3
+  *[other] {$egg_type_1}
+}
+pokemon-info-egg-type-2-label = 알그룹2:
+pokemon-info-egg-type-2 = {$egg_type_2 ->
+  [NONE] 없음
+  [Amorphous] 부정형
+  [Bug] 벌레
+  [Ditto] 메타몽
+  [Dragon] 드래곤
+  [Fairy] 요정
+  [Field] 육상
+  [Flying] 비행
+  [Grass] 식물
+  [Human-Like] 인간형
+  [Mineral] 광물
+  [Monster] 괴수
+  [Undiscovered] 미발견
+  [Water1] 수중1
+  [Water2] 수중2
+  [Water3] 수중3
+  *[other] {$egg_type_2}
+}
+pokemon-info-etc-label = 기타:
+pokemon-info-etc-is-galarian = 가라르
+pokemon-info-etc-is-alolan = 알로라
+pokemon-info-etc-is-mega = 메가
+pokemon-info-etc-is-partner = 파트너
+pokemon-info-etc-has-form-difference = 여러모습
+pokemon-info-etc-is-forme-change = 폼체인지
