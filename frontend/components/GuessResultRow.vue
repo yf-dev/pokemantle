@@ -4,7 +4,7 @@
     <td class="p-2">{{ translatePokemonName(guess_data.name, false) }}</td>
     <td class="p-2">{{ (guess_data.similarity * 100).toFixed(2) }}</td>
     <td class="p-2"
-      :style="{ background: 'linear-gradient(to left, transparent ' + rankPercent + '%, #9bff8d ' + rankPercent + '%)' }">
+      :style="{ background: 'linear-gradient(to left, transparent ' + rankPercent + '%, ' + ($colorMode.value === 'dark' ? '#125409' : '#9bff8d') + ' ' + rankPercent + '%)' }">
       {{
           isCorrect ? $t('correct-guess') : guess_data.rank
       }}</td>

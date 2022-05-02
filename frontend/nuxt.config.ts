@@ -4,7 +4,8 @@ import fluentPlugin from 'rollup-plugin-fluent-vue'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode'
   ],
   typescript: {
     shim: false
@@ -15,6 +16,9 @@ export default defineNuxtConfig({
       apiBase: 'http://localhost:8000',
       gtagId: 'GA_MEASUREMENT_ID',
     }
+  },
+  colorMode: {
+    classSuffix: ''
   },
   vite: {
     plugins: [fluentPlugin()],

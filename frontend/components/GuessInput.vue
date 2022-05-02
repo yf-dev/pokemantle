@@ -1,20 +1,22 @@
 <template>
   <div class="space-y-4">
-    <div v-if="error_message" class="p-4 text-red-700 border-l-4 border-red-700 bg-red-50" role="alert">
+    <div v-if="error_message"
+      class="p-4 text-red-700 dark:text-red-300 border-l-4 border-red-700  bg-red-50 dark:bg-stone-800" role="alert">
       <h3 class="text-sm font-medium">{{ $t(error_message) }}</h3>
     </div>
     <div class="flex items-center justify-center w-full">
       <div class="flex-shrink w-full relative">
         <input v-t:guess-input-input type="text"
-          class="w-full p-2 box-border border-2 border-gray-200 rounded focus:outline-none focus:border-indigo-400 focus:ring-0"
+          class="w-full p-2 box-border border-2 dark:text-slate-300 dark:bg-slate-700 border-gray-200 dark:border-slate-600 rounded focus:outline-none focus:border-indigo-400 dark:focus:border-indigo-600 focus:ring-0"
           :value="name" ref="nameInput" @input="debouncedNameInput" @keydown.enter="guess"
           @keydown.down.prevent="focusNextAutocompleteButton" @focus="focusedAutocompleteItemIndex = null"
           @focusout="unfocusInput" />
         <ul v-if="!isCloseAutocomplete && fuzzyPokemonNameMap.length > 0"
-          class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none text-sm">
+          class="absolute z-10 mt-1 w-full bg-white dark:bg-slate-600 shadow-lg max-h-56 rounded ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none text-sm">
           <li v-for="(name_item, index) in fuzzyPokemonNameMap" :key="name_item.english_name"
-            class="text-gray-900 relative">
-            <button class="w-full h-full p-2 text-left focus:outline-none focus:ring-0 focus:bg-indigo-100"
+            class="text-gray-900 dark:text-slate-200 relative">
+            <button
+              class="w-full h-full p-2 text-left focus:outline-none focus:ring-0 focus:bg-indigo-100 dark:focus:bg-indigo-900"
               ref="autocompleteButtons" :data-index="index" @focus="focusedAutocompleteItemIndex = index"
               @keydown.down.prevent="focusNextAutocompleteButton" @keydown.up.prevent="focusPrevAutocompleteButton"
               @focusout="unfocusInput" @click="autocompleteItemClicked(name_item)">
@@ -26,7 +28,7 @@
         </ul>
       </div>
       <button v-t:guess-input-button
-        class="inline-flex flex-shrink-0 ml-1 py-2 px-3 font-medium text-white bg-indigo-600 border border-indigo-600 rounded shadow-sm active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
+        class="inline-flex flex-shrink-0 ml-1 py-2 px-3 font-medium text-white dark:text-slate-200 bg-indigo-600 dark:bg-indigo-700 border border-indigo-600 dark:border-indigo-800 rounded shadow-sm active:text-indigo-500 hover:bg-transparent dark:hover:bg-indigo-600 hover:text-indigo-600 focus:outline-none focus:ring"
         @click="guess"></button>
     </div>
   </div>

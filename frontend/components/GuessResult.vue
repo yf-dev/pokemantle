@@ -1,8 +1,8 @@
 <template>
 
-  <table class="mt-4 w-full max-w-xl divide-y divide-gray-200">
+  <table class="mt-4 w-full max-w-xl divide-y divide-gray-200 dark:divide-slate-600">
     <thead>
-      <tr class="text-left whitespace-nowrap text-gray-900">
+      <tr class="text-left whitespace-nowrap text-gray-900 dark:text-slate-200">
         <th class="p-2" v-if="is_show_index">
           <button class="flex items-center w-full font-bold" @click="changeSort('index')">
             {{ $t('guess-result-header-index') }}
@@ -37,14 +37,14 @@
         </th>
       </tr>
     </thead>
-    <tbody class="divide-y divide-gray-100">
+    <tbody class="divide-y dark:divide-slate-700">
       <ClientOnly fallbackTag="tr">
         <GuessResultRow v-if="is_show_fixed_last && is_fixed_last && state.last_guess_data !== undefined"
-          class="bg-gray-50 border-gray-300 border-y" :guess_data="state.last_guess_data"
-          :is_show_index="is_show_index">
+          class="dark:text-slate-300 bg-gray-50 dark:bg-slate-800 border-gray-300 dark:border-slate-700 border-y"
+          :guess_data="state.last_guess_data" :is_show_index="is_show_index">
         </GuessResultRow>
         <GuessResultRow v-for="guess_data in sortedGuessDataList" :guess_data="guess_data"
-          :is_show_index="is_show_index" :key="guess_data.name"></GuessResultRow>
+          :is_show_index="is_show_index" :key="guess_data.name" class="dark:text-slate-300"></GuessResultRow>
       </ClientOnly>
     </tbody>
   </table>
