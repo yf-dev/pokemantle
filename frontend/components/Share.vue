@@ -74,7 +74,7 @@ function copyToClipboard() {
     puzzle_number: state.puzzle_number,
     guess_count: statistics.last_guess_count,
     best_rank: statistics.last_best_guess.rank,
-    best_similarity: statistics.last_best_guess.similarity,
+    best_similarity: (statistics.last_best_guess.similarity * 100).toFixed(2),
   }) + '\n' + url).then(() => {
     alert(fluent.format('share-clipboard-text-alert'))
   })
