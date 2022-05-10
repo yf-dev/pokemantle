@@ -61,10 +61,10 @@ faq-what-it-is-description = {pokemantle} is the game to guess today's Pokémon 
   .semantle-link-label = Semantle
 
 faq-generation-title = What Pokémon are included?
-faq-generation-description = It includes all Pokémon that have appeared in Pokémon Sword and Shield, and form differences with different characteristics are treated as separate Pokémon, so there are a total of {$number}.
+faq-generation-description = It includes all Pokémon that have appeared in Pokémon Legends: Arceus, and form differences with different characteristics are treated as separate Pokémon, so there are a total of {$number}.
 
 faq-show-info-title = Can I see the details of Pokémon?
-faq-show-info-description = Yes, click on the Pokemon you guessed in the list to see the details.
+faq-show-info-description = Yes, click on the Pokémon you guessed in the list to see the details.
 
 faq-similarity-title = How does it calculate the similarity?
 faq-similarity-description = Similarity is calculated based on the characteristics of Pokémon(generation, category, type, ability, stat, height, weight, experience group, regional form, mega evolution, partner, form difference, mythical/legendary, egg group).

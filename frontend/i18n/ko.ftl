@@ -52,7 +52,7 @@ faq-what-it-is-description = {pokemantle}은 오늘의 포켓몬을 맞추는 �
   .semantle-link-label = Semantle
 
 faq-generation-title = 어떤 포켓몬이 포함되어 있나요?
-faq-generation-description = 포켓몬스터 소드 · 실드 까지 등장한 포켓몬을 모두 포함하며, 서로 다른 특징을 가지는 폼체인지 등은 별도의 포켓몬으로 취급하여 총 {$number} 가지입니다. 
+faq-generation-description = Pokémon LEGENDS 아르세우스까지 등장한 포켓몬을 모두 포함하며, 서로 다른 특징을 가지는 폼체인지 등은 별도의 포켓몬으로 취급하여 총 {$number} 가지입니다. 
 
 faq-show-info-title = 포켓몬의 상세 정보를 볼 수 있나요?
 faq-show-info-description = 네. 추측한 포켓몬을 목록에서 클릭하면 상세 정보가 표시됩니다.
