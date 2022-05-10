@@ -1,7 +1,9 @@
 import { FluentBundle, FluentResource } from '@fluent/bundle'
 import { createFluentVue } from 'fluent-vue'
 
+// @ts-ignore
 import enMessages from '~/i18n/en.ftl?raw'
+// @ts-ignore
 import koMessages from '~/i18n/ko.ftl?raw'
 
 const enBundle = new FluentBundle('en')

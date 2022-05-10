@@ -1,10 +1,13 @@
 <template>
-  <tr :class="mainClass" @click="is_show_pokemon_info = !is_show_pokemon_info">
+  <tr v-bind="$attrs" :class="mainClass" @click="is_show_pokemon_info = !is_show_pokemon_info">
     <td class="p-2" v-if="is_show_index">{{ guess_data.index + 1 }}</td>
     <td class="p-2">{{ translatePokemonName(guess_data.name, false) }}</td>
-    <td class="p-2">{{ (guess_data.similarity * 100).toFixed(2) }}</td>
-    <td class="p-2"
-      :style="{ background: 'linear-gradient(to left, transparent ' + rankPercent + '%, ' + ($colorMode.value === 'dark' ? '#125409' : '#9bff8d') + ' ' + rankPercent + '%)' }">
+    <td class="p-2" :style="{
+      color: similarityColor(guess_data.rank)
+    }">{{ (guess_data.similarity * 100).toFixed(2) }}</td>
+    <td class="p-2" :style="{
+      background: 'linear-gradient(to left, transparent ' + rankPercent + '%, ' + ($colorMode.value === 'dark' ? '#125409' : '#9bff8d') + ' ' + rankPercent + '%)'
+    }">
       {{
           isCorrect ? $t('correct-guess') : guess_data.rank
       }}</td>
@@ -18,6 +21,7 @@
 
 <script setup lang="ts">
 import { translatePokemonName } from '#imports'
+const colorMode = useColorMode()
 const props = defineProps<{
   guess_data: GuessData
   is_show_index?: boolean,
@@ -40,4 +44,14 @@ const isCorrect = computed(() => {
 const pokemon = computed(() => {
   return api_data.pokemons.find((v) => v.name === props.guess_data.name)
 })
+
+const pokemonCount = computed(() => api_data.pokemons.length)
+
+function similarityColor(rank: number): string {
+  const relative_rank = 1 - Math.pow(1 - (rank / pokemonCount.value), 5) // easeOutQuint
+  if (colorMode.value === 'dark') {
+    return `rgb(203, ${213 * relative_rank}, ${225 * relative_rank})`
+  }
+  return `rgb(${255 * (1 - relative_rank)}, 0, 0)`
+}
 </script>

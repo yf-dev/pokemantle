@@ -80,7 +80,7 @@
         }}</PokemonInfoTag>
       </p>
       <p class="leading-relaxed">{{ $t('pokemon-info-etc-label') }}
-        <PokemonInfoTag v-if="pokemon.is_hisuian" class="bg-purple-200 dark:bg-purple-900">{{
+        <PokemonInfoTag v-if="pokemon.is_hisuian" class="bg-teal-200 dark:bg-teal-900">{{
             $t('pokemon-info-etc-is-hisuian')
         }}</PokemonInfoTag>
         <PokemonInfoTag v-if="pokemon.is_galarian" class="bg-purple-200 dark:bg-purple-900">{{
@@ -101,7 +101,7 @@
         <PokemonInfoTag v-if="pokemon.has_form_difference" class="bg-rose-200 dark:bg-rose-900">{{
             $t('pokemon-info-etc-has-form-difference')
         }}</PokemonInfoTag>
-        <PokemonInfoTag v-if="pokemon.is_forme_change" class="bg-teal-200 dark:bg-teal-900">{{
+        <PokemonInfoTag v-if="pokemon.is_forme_change" class="bg-zinc-200 dark:bg-zinc-700">{{
             $t('pokemon-info-etc-is-forme-change')
         }}</PokemonInfoTag>
       </p>
@@ -151,7 +151,7 @@ function typeBgClass(type?: string): string {
     'Grass': 'bg-green-200 dark:bg-green-900',
     'Ground': 'bg-amber-200 dark:bg-amber-900',
     'Ice': 'bg-sky-200 dark:bg-sky-900',
-    'Normal': 'bg-gray-200 dark:bg-gray-900',
+    'Normal': 'bg-gray-200 dark:bg-gray-700',
     'Poison': 'bg-violet-200 dark:bg-violet-900',
     'Psychic': 'bg-pink-200 dark:bg-pink-900',
     'Rock': 'bg-stone-400 dark:bg-stone-700',
@@ -163,7 +163,7 @@ function typeBgClass(type?: string): string {
 
 function eggTypeBgClass(egg_type?: string): string {
   const class_name = {
-    'Amorphous': 'bg-gray-200 dark:bg-gray-900',
+    'Amorphous': 'bg-gray-200 dark:bg-gray-700',
     'Bug': 'bg-lime-200 dark:bg-lime-900',
     'Ditto': 'bg-purple-200  dark:bg-purple-900',
     'Dragon': 'bg-indigo-200 dark:bg-indigo-900',
@@ -174,7 +174,7 @@ function eggTypeBgClass(egg_type?: string): string {
     'Human-Like': 'bg-orange-200 dark:bg-orange-900',
     'Mineral': 'bg-amber-200 dark:bg-amber-900',
     'Monster': 'bg-rose-200 dark:bg-rose-900',
-    'Undiscovered': 'bg-stone-200 dark:bg-stone-900',
+    'Undiscovered': 'bg-stone-200 dark:bg-stone-700',
     'Water 1': 'bg-sky-200 dark:bg-sky-900',
     'Water 2': 'bg-sky-300 dark:bg-sky-800',
     'Water 3': 'bg-sky-400 dark:bg-sky-700',
