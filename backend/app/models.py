@@ -7,6 +7,7 @@ class Pokemon(BaseModel):
     generation: int = Field(..., example=7)
     status: str = Field(..., example="Normal")
     species: str = Field(..., example="Disguise Pokémon")
+    is_hisuian: bool = Field(..., example=False)
     is_galarian: bool = Field(..., example=False)
     is_alolan: bool = Field(..., example=False)
     is_mega: bool = Field(..., example=False)

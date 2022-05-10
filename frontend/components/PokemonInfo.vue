@@ -80,6 +80,9 @@
         }}</PokemonInfoTag>
       </p>
       <p class="leading-relaxed">{{ $t('pokemon-info-etc-label') }}
+        <PokemonInfoTag v-if="pokemon.is_hisuian" class="bg-purple-200 dark:bg-purple-900">{{
+            $t('pokemon-info-etc-is-hisuian')
+        }}</PokemonInfoTag>
         <PokemonInfoTag v-if="pokemon.is_galarian" class="bg-purple-200 dark:bg-purple-900">{{
             $t('pokemon-info-etc-is-galarian')
         }}</PokemonInfoTag>

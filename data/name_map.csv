@@ -76,7 +76,9 @@ Golduck,골덕
 Mankey,망키
 Primeape,성원숭
 Growlithe,가디
+Hisuian Growlithe,가디(히스이의 모습)
 Arcanine,윈디
+Hisuian Arcanine,윈디(히스이의 모습)
 Poliwag,발챙이
 Poliwhirl,슈륙챙이
 Poliwrath,강챙이
@@ -131,7 +133,9 @@ Hypno,슬리퍼
 Krabby,크랩
 Kingler,킹크랩
 Voltorb,찌리리공
+Hisuian Voltorb,찌리리공(히스이의 모습)
 Electrode,붐볼
+Hisuian Electrode,붐볼(히스이의 모습)
 Exeggcute,아라리
 Exeggutor,나시
 Alolan Exeggutor,나시(알로라의 모습)
@@ -202,6 +206,7 @@ Meganium,메가니움
 Cyndaquil,브케인
 Quilava,마그케인
 Typhlosion,블레이범
+Hisuian Typhlosion,블레이범(히스이의 모습)
 Totodile,리아코
 Croconaw,엘리게이
 Feraligatr,장크로다일
@@ -259,12 +264,14 @@ Mega Steelix,메가강철톤
 Snubbull,블루
 Granbull,그랑블루
 Qwilfish,침바루
+Hisuian Qwilfish,침바루(히스이의 모습)
 Scizor,핫삼
 Mega Scizor,메가핫삼
 Shuckle,단단지
 Heracross,헤라크로스
 Mega Heracross,메가헤라크로스
 Sneasel,포푸니
+Hisuian Sneasel,포푸니(히스이의 모습)
 Teddiursa,깜지곰
 Ursaring,링곰
 Slugma,마그마그
@@ -617,6 +624,7 @@ Emboar,염무왕
 Oshawott,수댕이
 Dewott,쌍검자비
 Samurott,대검귀
+Hisuian Samurott,대검귀(히스이의 모습)
 Patrat,보르쥐
 Watchog,보르그
 Lillipup,요테리
@@ -664,8 +672,10 @@ Cottonee,소미안
 Whimsicott,엘풍
 Petilil,치릴리
 Lilligant,드레디어
+Hisuian Lilligant,드레디어(히스이의 모습)
 Basculin Red-Striped Form,배쓰나이(적색근의 모습)
 Basculin Blue-Striped Form,배쓰나이(청색근의 모습)
+Basculin White-Striped Form,배쓰나이(백색근의 모습)
 Sandile,깜눈크
 Krokorok,악비르
 Krookodile,악비아르
@@ -691,7 +701,9 @@ Archeops,아케오스
 Trubbish,깨봉이
 Garbodor,더스트나
 Zorua,조로아
+Hisuian Zorua,조로아(히스이의 모습)
 Zoroark,조로아크
+Hisuian Zoroark,조로아크(히스이의 모습)
 Minccino,치라미
 Cinccino,치라치노
 Gothita,고디탱
@@ -750,6 +762,7 @@ Bisharp,절각참
 Bouffalant,버프론
 Rufflet,수리둥보
 Braviary,워글
+Hisuian Braviary,워글(히스이의 모습)
 Vullaby,벌차이
 Mandibuzz,버랜지나
 Heatmor,앤티골
@@ -837,7 +850,9 @@ Dedenne,데덴네
 Carbink,멜리시
 Goomy,미끄메라
 Sliggoo,미끄네일
+Hisuian Sliggoo,미끄네일(히스이의 모습)
 Goodra,미끄래곤
+Hisuian Goodra,미끄래곤(히스이의 모습)
 Klefki,클레피
 Phantump,나목령
 Trevenant,대로트
@@ -851,6 +866,7 @@ Gourgeist Large Size,펌킨인(큰 사이즈)
 Gourgeist Super Size,펌킨인(특대 사이즈)
 Bergmite,꽁어름
 Avalugg,크레베이스
+Hisuian Avalugg,크레베이스(히스이의 모습)
 Noibat,음뱃
 Noivern,음번
 Xerneas,제르네아스
@@ -866,6 +882,7 @@ Volcanion,볼케니온
 Rowlet,나몰빼미
 Dartrix,빼미스로우
 Decidueye,모크나이퍼
+Hisuian Decidueye,모크나이퍼(히스이의 모습)
 Litten,냐오불
 Torracat,냐오히트
 Incineroar,어흥염
@@ -1061,10 +1078,10 @@ Duraludon,두랄루돈
 Dreepy,드라꼰
 Drakloak,드래런치
 Dragapult,드래펄트
-Zacian Crowned Sword,자시안
-Zacian Hero of Many Battles,자시안(검왕)
-Zamazenta Crowned Shield,자마젠타
-Zamazenta Hero of Many Battles,자마젠타(방패왕)
+Zacian Crowned Sword,자시안(검왕)
+Zacian Hero of Many Battles,자시안
+Zamazenta Crowned Shield,자마젠타(방패왕)
+Zamazenta Hero of Many Battles,자마젠타
 Eternatus,무한다이노
 Kubfu,치고마
 Urshifu Single Strike Style,우라오스(일격의 태세)
@@ -1077,3 +1094,12 @@ Spectrier,레이스포스
 Calyrex,버드렉스
 Calyrex Ice Rider,버드렉스(백마 탄 모습)
 Calyrex Shadow Rider,버드렉스(흑마 탄 모습)
+Wyrdeer,신비록
+Kleavor,사마자르
+Ursaluna,다투곰
+Basculegion Male,대쓰여너(수컷의 모습)
+Basculegion Female,대쓰여너(암컷의 모습)
+Sneasler,포푸니크
+Overqwil,장침바루
+Enamorus Incarnate Forme,러브로스
+Enamorus Therian Forme,러브로스(영물폼)

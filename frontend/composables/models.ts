@@ -3,6 +3,7 @@ interface Pokemon {
   generation: number
   status: string
   species: string
+  is_hisuian: boolean
   is_galarian: boolean
   is_alolan: boolean
   is_mega: boolean

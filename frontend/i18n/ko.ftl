@@ -209,6 +209,7 @@ pokemon-info-egg-type-2 = {$egg_type_2 ->
   *[other] {$egg_type_2}
 }
 pokemon-info-etc-label = 기타:
+pokemon-info-etc-is-hisuian = 히스이
 pokemon-info-etc-is-galarian = 가라르
 pokemon-info-etc-is-alolan = 알로라
 pokemon-info-etc-is-mega = 메가

@@ -223,9 +223,10 @@ pokemon-info-egg-type-2 = {$egg_type_2 ->
   *[other] {$egg_type_2}
 }
 pokemon-info-etc-label = Etc:
+pokemon-info-etc-is-hisuian = Hisuian
 pokemon-info-etc-is-galarian = Galarian
 pokemon-info-etc-is-alolan = Alolan
 pokemon-info-etc-is-mega = Mega
 pokemon-info-etc-is-partner = Partner
-pokemon-info-etc-has-form-difference = Form Difference
+pokemon-info-etc-has-form-difference = Has Form Difference
 pokemon-info-etc-is-forme-change = Forme Change
