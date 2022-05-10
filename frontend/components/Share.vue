@@ -84,11 +84,6 @@ function copyToClipboard() {
 }
 
 function showRankList() {
-  if (typeof statistics.last_correct_guess === "undefined") {
-    // this is old format. try to convert
-    // TODO: remove this
-    statistics.last_correct_guess = Object.assign({}, state.guess_data_list.find((v) => v.rank === 0))
-  }
   useRouter().push(`/rank/${state.puzzle_number}/${utf8ToB64(statistics.last_correct_guess.name)}`)
 }
 </script>

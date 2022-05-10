@@ -70,17 +70,6 @@ export const loadPuzzleNumber = (): number => {
 export const loadStatistics = (): Statistics => {
   if (typeof window !== "undefined") {
     const data = JSON.parse(localStorage.getItem('statistics') || JSON.stringify(default_statistics))
-
-    if (typeof data.last_best_rank !== "undefined") {
-      // this is old format. try to convert
-      // TODO: remove this
-      data.last_best_guess = {
-        name: "",
-        rank: data.last_best_rank,
-        similarity: data.last_best_similarity,
-      }
-      data.last_correct_guess = undefined
-    }
     return data
   }
   return default_statistics
