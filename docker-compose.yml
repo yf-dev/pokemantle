@@ -9,6 +9,7 @@ services:
       - POKEMANTLE_NAME_MAP=/data/name_map.csv
       - POKEMANTLE_OLD_SECRET=/data/old_secret.csv
       - POKEMANTLE_PRODUCTION=True
+      - POKEMANTLE_CORS_ORIGIN=http://localhost:3000
     volumes:
       - ./data:/data
   frontend:
@@ -16,5 +17,6 @@ services:
     ports:
       - 3000:80
     environment:
-      - NUXT_PUBLIC_API_BASE=http://localhost:8000
+      - NUXT_PUBLIC_API_CLIENT_BASE=http://localhost:8000
+      - NUXT_API_SERVER_BASE=http://backend:80
       - POKEMANTLE_PRODUCTION=True

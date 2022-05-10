@@ -11,9 +11,10 @@ export default defineNuxtConfig({
     shim: false
   },
   runtimeConfig: {
+    apiServerBase: 'http://localhost:8000',
     public: {
       frontendBase: 'http://localhost:3000',
-      apiBase: 'http://localhost:8000',
+      apiClientBase: 'http://localhost:8000',
       gtagId: 'GA_MEASUREMENT_ID',
     }
   },

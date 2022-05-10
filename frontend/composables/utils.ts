@@ -35,3 +35,7 @@ export const utf8ToB64 = (str: string): string => {
 export const b64ToUtf8 = (str: string): string => {
   return Buffer.from(str, 'base64').toString('utf8');
 }
+
+export const apiBase = (): string => {
+  return process.client ? api_client_base.value : api_server_base.value
+}
