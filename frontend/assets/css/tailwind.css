@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  word-break: keep-all;
+}
+
 .dark body {
   background-color: theme('colors.slate.900');
 }

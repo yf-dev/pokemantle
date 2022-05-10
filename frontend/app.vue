@@ -52,6 +52,18 @@ useHead({
     { name: 'og:title', content: title },
     { name: 'og:type', content: 'website' },
     { name: 'og:description', content: fluent.format('og-description') },
+  ],
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: '/favicon.svg'
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
   ]
 })
 
