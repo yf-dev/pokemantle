@@ -5,19 +5,25 @@ https://pokemantle.update.sh/
 
 Pokémon guessing game inspired by [Semantle](https://semantle.novalis.org/)
 
-# Start server
+## Start server
 
 ```bash
 docker-compose up # http://localhost:3000/
 ```
 
-# Generate old_secret.csv
+## Generate old_secret.csv
 
 ```bash
-python -m app.export_old_secret 10 > ../data/old_secret_temp.csv
+poetry run poe export-old-secret 10
 ```
 
-# Data source
+## Validate data
+
+```bash
+poetry run poe validate-data
+```
+
+## Data source
 
 pokedex.csv is based on [Complete Pokemon Dataset](https://www.kaggle.com/datasets/mariotormo/complete-pokemon-dataset-updated-090420) by Mario Tormo Romero, CC BY-SA 4.0
 

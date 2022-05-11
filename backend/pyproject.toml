@@ -17,6 +17,12 @@ scikit-learn = "^1.0.2"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
+frictionless = "^4.34.0"
+poethepoet = "^0.13.1"
+
+[tool.poe.tasks]
+validate-data = "frictionless validate ../data/datapackage.yaml"
+export-old-secret = "python -m app.export_old_secret"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

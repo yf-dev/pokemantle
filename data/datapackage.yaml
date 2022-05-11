@@ -1,0 +1,527 @@
+resources:
+  - path: pokedex.csv
+    name: pokedex
+    profile: tabular-data-resource
+    scheme: file
+    format: csv
+    hashing: md5
+    encoding: utf-8
+    schema:
+      primaryKey: name
+      fields:
+        - name: pokedex_number
+          title: Pokédex number
+          description: The entry number of the Pokémon in the National Pokédex
+          type: integer
+          constraints:
+            required: true
+            minimum: 1
+        - name: name
+          title: Pokémon Name
+          description: The English name of the Pokémon
+          type: string
+          constraints:
+            required: true
+            unique: true
+        - name: generation
+          title: Generation
+          description: The numbered generation which the Pokémon was first introduced
+          type: integer
+          constraints:
+            required: true
+            minimum: 1
+        - name: status
+          title: Status
+          description: The status of the Pokémon is Normal/Sub Legendary/Legendary/Mythical
+          type: string
+          constraints:
+            required: true
+            enum:
+              - Normal
+              - Sub Legendary
+              - Legendary
+              - Mythical
+        - name: species
+          title: Species
+          description: The Categorie of the Pokémon
+          type: string
+          constraints:
+            required: true
+        - name: is_hisuian
+          title: Is Hisuian
+          description: Denotes if the Pokémon is Hisuian
+          type: integer
+          constraints:
+            required: true
+            enum:
+              - 0
+              - 1
+        - name: is_galarian
+          title: Is Galarian
+          description: Denotes if the Pokémon is Galarian
+          type: integer
+          constraints:
+            required: true
+            enum:
+              - 0
+              - 1
+        - name: is_alolan
+          title: Is Alolan
+          description: Denotes if the Pokémon is Alolan
+          type: integer
+          constraints:
+            required: true
+            enum:
+              - 0
+              - 1
+        - name: is_mega
+          title: Is Mega-Evolved
+          description: Denotes if the Pokémon is Mega-Evolved
+          type: integer
+          constraints:
+            required: true
+            enum:
+              - 0
+              - 1
+        - name: is_partner
+          title: Is Partner
+          description: Denotes if the Pokémon is Partner
+          type: integer
+          constraints:
+            required: true
+            enum:
+              - 0
+              - 1
+        - name: has_form_difference
+          title: Has form difference
+          description: Denotes if the Pokémon with multiple forms(Regional forms, Gender differences, Unown, Castform, etc.)
+          type: integer
+          constraints:
+            required: true
+            enum:
+              - 0
+              - 1
+        - name: is_forme_change
+          title: Is Forme Change
+          description: Denotes if the Pokémon is Forme Change
+          type: integer
+          constraints:
+            required: true
+            enum:
+              - 0
+              - 1
+        - name: type_number
+          title: Type number
+          description: Number of types that the Pokémon has
+          type: integer
+          constraints:
+            required: true
+            minimum: 1
+        - name: type_1
+          title: Type 1
+          description: The Primary Type of the Pokémon
+          type: string
+          constraints:
+            required: true
+            enum:
+              - Bug
+              - Dark
+              - Dragon
+              - Electric
+              - Fairy
+              - Fighting
+              - Fire
+              - Flying
+              - Ghost
+              - Grass
+              - Ground
+              - Ice
+              - Normal
+              - Poison
+              - Psychic
+              - Rock
+              - Steel
+              - Water
+        - name: type_2
+          title: Type 2
+          description: The Secondary Type of the Pokémon if it has it
+          type: string
+          constraints:
+            enum:
+              - Bug
+              - Dark
+              - Dragon
+              - Electric
+              - Fairy
+              - Fighting
+              - Fire
+              - Flying
+              - Ghost
+              - Grass
+              - Ground
+              - Ice
+              - Normal
+              - Poison
+              - Psychic
+              - Rock
+              - Steel
+              - Water
+        - name: height_m
+          title: Height(m)
+          description: Height of the Pokémon in meters
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: weight_kg
+          title: Weight(kg)
+          description: The Weight of the Pokémon in kilograms
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: abilities_number
+          title: Abilities number
+          description: The number of abilities of the Pokémon
+          type: integer
+          constraints:
+            required: true
+            minimum: 1
+        - name: ability_1
+          title: Ability 1
+          description: The Primary Ability of the Pokémon if it has one
+          type: string
+        - name: ability_2
+          title: Ability 1
+          description: The Secondary Ability of the Pokémon if it has one
+          type: string
+        - name: ability_hidden
+          title: Ability 1
+          description: The Hidden Ability of the Pokémon if it has one
+          type: string
+        - name: total_points
+          title: Total points
+          description: Total number of Base Points
+          type: integer
+          constraints:
+            required: true
+            minimum: 0
+        - name: hp
+          title: HP
+          description: The Base HP of the Pokémon
+          type: integer
+          constraints:
+            required: true
+            minimum: 0
+        - name: attack
+          title: Attack
+          description: The Base Attack of the Pokémon
+          type: integer
+          constraints:
+            required: true
+            minimum: 0
+        - name: defense
+          title: Defense
+          description: The Base Defense of the Pokémon
+          type: integer
+          constraints:
+            required: true
+            minimum: 0
+        - name: sp_attack
+          title: Special Attack
+          description: The Base Special Attack of the Pokémon
+          type: integer
+          constraints:
+            required: true
+            minimum: 0
+        - name: sp_defense
+          title: Special Defense
+          description: The Base Special Defense of the Pokémon
+          type: integer
+          constraints:
+            required: true
+            minimum: 0
+        - name: speed
+          title: Speed
+          description: The Base Speed of the Pokémon
+          type: integer
+          constraints:
+            required: true
+            minimum: 0
+        - name: catch_rate
+          title: Catch Rate
+          description: Catch Rate of the Pokémon
+          type: integer
+          constraints:
+            minimum: 0
+        - name: base_friendship
+          title: Base Friendship
+          description: The Base Friendship of the Pokémon
+          type: integer
+          constraints:
+            minimum: 0
+        - name: base_experience
+          title: Base experience
+          description: The Base experience of a wild Pokémon when caught
+          type: integer
+          constraints:
+            minimum: 0
+        - name: growth_rate
+          title: Growth Rate
+          description: The Growth Rate of the Pokémon
+          type: string
+          constraints:
+            required: true
+            enum:
+              - Slow
+              - Medium Slow
+              - Medium Fast
+              - Fast
+              - Fluctuating
+              - Erratic
+        - name: egg_type_number
+          title: Egg Type number
+          description: Number of egg groups where a Pokémon can hatch
+          type: integer
+          constraints:
+            required: true
+            minimum: 0
+        - name: egg_type_1
+          title: Egg Type 1
+          description: The Primary name of the egg groups where a Pokémon can hatch
+          type: string
+          constraints:
+            required: true
+            enum:
+              - Amorphous
+              - Bug
+              - Ditto
+              - Dragon
+              - Fairy
+              - Field
+              - Flying
+              - Grass
+              - Human-Like
+              - Mineral
+              - Monster
+              - Undiscovered
+              - Water 1
+              - Water 2
+              - Water 3
+        - name: egg_type_2
+          title: Egg Type 2
+          description: The Secondary name of the egg groups where a Pokémon can hatch
+          type: string
+          constraints:
+            enum:
+              - Amorphous
+              - Bug
+              - Ditto
+              - Dragon
+              - Fairy
+              - Field
+              - Flying
+              - Grass
+              - Human-Like
+              - Mineral
+              - Monster
+              - Undiscovered
+              - Water 1
+              - Water 2
+              - Water 3
+        - name: percentage_male
+          title: Percentage male
+          description: The percentage of the species that are male. Blank if the Pokémon is genderless
+          type: number
+          constraints:
+            minimum: 0
+        - name: egg_cycles
+          title: Egg cycles
+          description: The number of cycles (255-257 steps) required to hatch an egg of the Pokémon
+          type: integer
+          constraints:
+            minimum: 0
+        - name: against_normal
+          title: Against Normal
+          description: Denote the amount of damage taken against an attack of a Normal type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_fire
+          title: Against Fire
+          description: Denote the amount of damage taken against an attack of a Fire type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_water
+          title: Against Water
+          description: Denote the amount of damage taken against an attack of a Water type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_electric
+          title: Against Electric
+          description: Denote the amount of damage taken against an attack of a Electric type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_grass
+          title: Against Grass
+          description: Denote the amount of damage taken against an attack of a Grass type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_ice
+          title: Against Ice
+          description: Denote the amount of damage taken against an attack of a Ice type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_fight
+          title: Against Fight
+          description: Denote the amount of damage taken against an attack of a Fight type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_poison
+          title: Against Poison
+          description: Denote the amount of damage taken against an attack of a Poison type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_ground
+          title: Against Ground
+          description: Denote the amount of damage taken against an attack of a Ground type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_flying
+          title: Against Flying
+          description: Denote the amount of damage taken against an attack of a Flying type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_psychic
+          title: Against Psychic
+          description: Denote the amount of damage taken against an attack of a Psychic type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_bug
+          title: Against Bug
+          description: Denote the amount of damage taken against an attack of a Bug type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_rock
+          title: Against c
+          description: Denote the amount of damage taken against an attack of a rock type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_ghost
+          title: Against Ghost
+          description: Denote the amount of damage taken against an attack of a Ghost type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_dragon
+          title: Against Dragon
+          description: Denote the amount of damage taken against an attack of a Dragon type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_dark
+          title: Against Dark
+          description: Denote the amount of damage taken against an attack of a Dark type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_steel
+          title: Against Steel
+          description: Denote the amount of damage taken against an attack of a Steel type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+        - name: against_fairy
+          title: Against Fairy
+          description: Denote the amount of damage taken against an attack of a Fairy type
+          type: number
+          constraints:
+            required: true
+            minimum: 0
+  - path: name_map.csv
+    name: name_map
+    profile: tabular-data-resource
+    scheme: file
+    format: csv
+    hashing: md5
+    encoding: utf-8
+    schema:
+      primaryKey: en
+      foreignKeys:
+        - fields: en
+          reference:
+            resource: pokedex
+            fields: name
+      fields:
+        - name: en
+          title: English
+          description: The English name of the Pokémon
+          type: string
+          constraints:
+            required: true
+            unique: true
+        - name: ko
+          title: Korean
+          description: The Korean name of the Pokémon
+          type: string
+          constraints:
+            required: true
+            unique: true
+  - path: old_secret.csv
+    name: old_secret
+    profile: tabular-data-resource
+    scheme: file
+    format: csv
+    hashing: md5
+    encoding: utf-8
+    schema:
+      primaryKey: puzzle_number
+      foreignKeys:
+        - fields: name
+          reference:
+            resource: pokedex
+            fields: name
+      fields:
+        - name: puzzle_number
+          title: Puzzle Number
+          description: The puzzle number of the Pokémantle
+          type: integer
+          constraints:
+            required: true
+            unique: true
+        - name: name
+          title: Pokémon Name
+          description: The English name of the Pokémon
+          type: string
+          constraints:
+            required: true
+profile: data-package
