@@ -24,6 +24,7 @@ guess-result-header-rank = 순위
 correct-guess = 정답!
 
 share-title = {pokemantle} #{$puzzle_number} 성공!
+share-pokemon-name = 정답: {$name}
 
 share-guess-count-title = 추측 횟수
 share-guess-count-value = {$value}회
@@ -38,6 +39,7 @@ share-streak-value = {$value}회
 share-streak-best = 최고기록 {$value}회
 
 share-button = 공유하기
+share-hide-answer-checkbox-label = 정답 숨기기
 share-clipboard-text = {pokemantle} #{$puzzle_number} 성공!
   {$guess_count}번째 추측에서 포켓몬을 맞췄습니다.
   가장 유사한 추측의 순위는 {$best_rank}위이며, 유사도는 {$best_similarity}입니다.

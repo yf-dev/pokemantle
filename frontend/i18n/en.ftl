@@ -24,6 +24,7 @@ guess-result-header-rank = Rank
 correct-guess = Found!
 
 share-title = {pokemantle} #{$puzzle_number} Solved!
+share-pokemon-name = Answer: {$name}
 
 share-guess-count-title = Guesses
 share-guess-count-value = {$value}
@@ -38,6 +39,7 @@ share-streak-value = {$value}
 share-streak-best = Best {$value}
 
 share-button = Share
+share-hide-answer-checkbox-label = Hide answer
 share-clipboard-text = {pokemantle} #{$puzzle_number} Solved!
   I found Pokémon on { NUMBER($guess_count, type: "ordinal") ->
     [one] the {$guess_count}st guess
