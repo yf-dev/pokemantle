@@ -34,12 +34,12 @@ if (typeof route.params.puzzle_number === 'string' && typeof route.params.base64
 async function load_data() {
   error_message.value = ""
   try {
-    const { data } = await useFetch<Array<GuessResult>>(`rank/${puzzle_number.value}`, { baseURL: apiBase() });
-    if (data.value[0].name !== english_name.value) {
+    const data = await apiRank(puzzle_number.value)
+    if (data[0].name !== english_name.value) {
       error_message.value = "error-invalid-request"
       return;
     }
-    rank_data.guess_list = data.value.map((guess_result) => {
+    rank_data.guess_list = data.map((guess_result) => {
       return {
         index: null,
         name: guess_result.name,

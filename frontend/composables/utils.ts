@@ -37,6 +37,5 @@ export const b64ToUtf8 = (str: string): string => {
 }
 
 export const apiBase = (): string => {
-  const config = useRuntimeConfig()
-  return process.client ? config.public.apiClientBase : config.apiServerBase
+  return process.client ? api_client_base.value : api_server_base.value
 }
