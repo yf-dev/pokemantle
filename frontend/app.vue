@@ -7,16 +7,12 @@
 </template>
 
 <script setup lang="ts">
-import { trackRouter, useState } from "vue-gtag-next"
+import { trackRouter, useState as useGtagState } from "vue-gtag-next"
 
 const config = useRuntimeConfig()
-api_server_base.value = config.apiServerBase
-api_client_base.value = config.public.apiClientBase
 
 state.locale = getLocale()
-watchEffect(async () => {
-  changeLocale(state.locale)
-})
+watchEffect(async () => await changeLocale(state.locale))
 
 state.puzzle_number = todayPuzzleNumber()
 
@@ -35,10 +31,9 @@ api_data.pokemons = loaded_api_data.pokemons
 api_data.pokemon_local_name_map = loaded_api_data.pokemon_local_name_map
 api_data.pokemon_english_name_map = loaded_api_data.pokemon_english_name_map
 
-apiPokemons().then((data) => {
-  api_data.pokemons = data
-  saveApiData()
-})
+const { data: pokemons } = await useFetch<Array<Pokemon>>('pokemons', { baseURL: apiBase() });
+api_data.pokemons = pokemons.value
+saveApiData()
 
 const loaded_puzzle_number = loadPuzzleNumber()
 if (loaded_puzzle_number === state.puzzle_number) {
@@ -70,7 +65,7 @@ useHead({
 if (process.env.NODE_ENV === 'production' && typeof window !== "undefined") {
   const router = useRouter()
   trackRouter(router)
-  useState().property.value = {
+  useGtagState().property.value = {
     id: config.public.gtagId
   }
 }

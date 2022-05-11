@@ -64,10 +64,6 @@
 
 <script setup lang="ts">
 import { state, api_data, translatePokemonName, utf8ToB64 } from '#imports'
-
-const yesterdayName = ref('')
-
-apiRank(state.puzzle_number - 1).then((data) => {
-  yesterdayName.value = data[0].name
-})
+const { data } = await useFetch<Array<GuessResult>>(`rank/${state.puzzle_number - 1}`, { baseURL: apiBase() });
+const yesterdayName = ref(data.value[0].name)
 </script>

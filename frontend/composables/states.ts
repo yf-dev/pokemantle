@@ -1,6 +1,3 @@
-export const api_server_base = ref("")
-export const api_client_base = ref("")
-
 export const state = reactive<State>({
   puzzle_number: 0,
   guess_data_list: [],

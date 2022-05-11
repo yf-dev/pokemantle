@@ -10,18 +10,17 @@ export const addGuessResult = (guess_result: GuessResult): GuessData => {
   return guess_data
 }
 
-export const changeLocale = (locale: string) => {
+export const changeLocale = async (locale: string) => {
   if (isValidFluentLocale) {
     changeFluentLocale(locale)
-    apiPokemonNameMap(locale).then((data) => {
-      api_data.pokemon_local_name_map = new Map()
-      api_data.pokemon_english_name_map = new Map()
-      for (const item of data) {
-        api_data.pokemon_local_name_map[item.local_name.toLowerCase()] = item.english_name
-        api_data.pokemon_english_name_map[item.english_name.toLowerCase()] = item.local_name
-      }
-      saveApiData()
-    })
+    const { data } = await useFetch<Array<LocalName>>(`pokemon_name_map/${locale}`, { baseURL: apiBase() });
+    api_data.pokemon_local_name_map = new Map()
+    api_data.pokemon_english_name_map = new Map()
+    for (const item of data.value) {
+      api_data.pokemon_local_name_map[item.local_name.toLowerCase()] = item.english_name
+      api_data.pokemon_english_name_map[item.english_name.toLowerCase()] = item.local_name
+    }
+    saveApiData()
   }
 }
 

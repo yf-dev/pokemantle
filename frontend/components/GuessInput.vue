@@ -60,8 +60,8 @@ async function guess() {
       name.value = ""
       return
     }
-    const data = await apiGuess(state.puzzle_number, eng_name)
-    state.last_guess_data = addGuessResult(data)
+    const { data } = await useFetch<GuessResult>(`guess/${state.puzzle_number}?name=${eng_name}`, { baseURL: apiBase() });
+    state.last_guess_data = addGuessResult(data.value)
     name.value = ""
     updateStatistics()
   } catch (e) {
