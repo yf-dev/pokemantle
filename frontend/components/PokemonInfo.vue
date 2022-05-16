@@ -38,17 +38,17 @@
     <PokemonInfoBlock>
       <p class="leading-relaxed">{{ $t('pokemon-info-ability-1', {
           ability_1: pokemon.ability_1 !== null ?
-            pokemon.ability_1 : 'NONE'
+            $t(`ability-${pokemon.ability_1.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z-]/g, '')}`) : 'NONE'
         })
       }}</p>
       <p class="leading-relaxed">{{ $t('pokemon-info-ability-2', {
           ability_2: pokemon.ability_2 !== null ?
-            pokemon.ability_2 : 'NONE'
+            $t(`ability-${pokemon.ability_2.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z-]/g, '')}`) : 'NONE'
         })
       }}</p>
       <p class="leading-relaxed">{{ $t('pokemon-info-ability-hidden', {
           ability_hidden: pokemon.ability_hidden !== null ?
-            pokemon.ability_hidden : 'NONE'
+            $t(`ability-${pokemon.ability_hidden.toLowerCase().replaceAll(' ', '-').replaceAll(/[^a-z-]/g, '')}`) : 'NONE'
         })
       }}</p>
     </PokemonInfoBlock>
