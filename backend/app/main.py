@@ -26,7 +26,7 @@ if "POKEMANTLE_NAME_MAP" not in os.environ:
 if "POKEMANTLE_OLD_SECRET" not in os.environ:
     raise Exception("environment variable POKEMANTLE_OLD_SECRET is not defined")
 
-RANDOM = Random(os.environ.get("POKEMANTLE_RANDOM_SEED", 20220428))
+RANDOM = Random(os.environ.get("POKEMANTLE_RANDOM_SEED", 20220516))
 
 POKEDEX = pd.read_csv(os.environ["POKEMANTLE_POKEDEX"]).replace({np.nan: None})
 POKEMON_NAME_MAP = pd.read_csv(os.environ["POKEMANTLE_NAME_MAP"])

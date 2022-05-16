@@ -585,7 +585,9 @@ pokedex_number,name,generation,status,species,is_hisuian,is_galarian,is_alolan,i
 481,Mesprit,4,Sub Legendary,Emotion Pokémon,0,0,0,0,0,0,0,1,Psychic,,0.3,0.3,1,Levitate,,,580,80,105,105,105,105,80,3,140,261,Slow,1,Undiscovered,,,80,1,1,1,1,1,1,0.5,1,0,1,0.5,2,1,2,1,2,1,1
 482,Azelf,4,Sub Legendary,Willpower Pokémon,0,0,0,0,0,0,0,1,Psychic,,0.3,0.3,1,Levitate,,,580,75,125,70,125,70,115,3,140,261,Slow,1,Undiscovered,,,80,1,1,1,1,1,1,0.5,1,0,1,0.5,2,1,2,1,2,1,1
 483,Dialga,4,Legendary,Temporal Pokémon,0,0,0,0,0,1,0,2,Steel,Dragon,5.4,683,2,Pressure,,Telepathy,680,100,120,120,150,100,90,3,0,306,Slow,1,Undiscovered,,,120,0.5,1,0.5,0.5,0.25,1,2,0,2,0.5,0.5,0.5,0.5,1,1,1,0.5,1
+483,Dialga Origin Forme,4,Legendary,Temporal Pokémon,0,0,0,0,0,1,1,2,Steel,Dragon,7,848.7,2,Pressure,,Telepathy,680,100,100,120,150,120,90,3,0,306,Slow,1,Undiscovered,,,120,0.5,1,0.5,0.5,0.25,1,2,0,2,0.5,0.5,0.5,0.5,1,1,1,0.5,1
 484,Palkia,4,Legendary,Spatial Pokémon,0,0,0,0,0,1,0,2,Water,Dragon,4.2,336,2,Pressure,,Telepathy,680,90,120,100,150,120,100,3,0,306,Slow,1,Undiscovered,,,120,1,0.25,0.25,1,1,1,1,1,1,1,1,1,1,1,2,1,0.5,2
+484,Palkia Origin Forme,4,Legendary,Spatial Pokémon,0,0,0,0,0,1,1,2,Water,Dragon,6.3,659,2,Pressure,,Telepathy,680,90,100,100,150,120,120,3,0,306,Slow,1,Undiscovered,,,120,1,0.25,0.25,1,1,1,1,1,1,1,1,1,1,1,2,1,0.5,2
 485,Heatran,4,Sub Legendary,Lava Dome Pokémon,0,0,0,0,0,0,0,2,Fire,Steel,1.7,430,2,Flash Fire,,Flame Body,600,91,90,106,130,106,77,3,100,270,Slow,1,Undiscovered,,50,10,0.5,0,2,1,0.25,0.25,2,0,4,0.5,0.5,0.25,1,1,0.5,1,0.25,0.25
 486,Regigigas,4,Sub Legendary,Colossal Pokémon,0,0,0,0,0,0,0,1,Normal,,3.7,420,1,Slow Start,,,670,110,160,110,80,110,100,3,0,302,Slow,1,Undiscovered,,,120,1,1,1,1,1,1,2,1,1,1,1,1,1,0,1,1,1,1
 487,Giratina Altered Forme,4,Legendary,Renegade Pokémon,0,0,0,0,0,1,0,2,Ghost,Dragon,4.5,750,2,Pressure,,Telepathy,680,150,100,120,100,120,90,3,0,306,Slow,1,Undiscovered,,,120,0,0.5,0.5,0.5,0.5,2,0,0.5,1,1,1,0.5,1,2,2,2,1,2
@@ -1096,7 +1098,7 @@ pokedex_number,name,generation,status,species,is_hisuian,is_galarian,is_alolan,i
 898,Calyrex Shadow Rider,8,Legendary,High King Pokémon,0,0,0,0,0,1,1,2,Psychic,Ghost,2.4,53.6,1,As One,,,680,100,85,80,165,100,150,3,,,Slow,1,Undiscovered,,,120,0,1,1,1,1,1,0,0.5,1,1,0.5,1,1,4,1,4,1,1
 899,Wyrdeer,8,Normal,Big Horn Pokémon,0,0,0,0,0,0,0,2,Normal,Psychic,1.8,95.1,3,Intimidate,Frisk,Sap Sipper,525,103,105,72,105,75,65,,,,Slow,1,Field,,50,,1,1,1,1,1,1,1,1,1,1,0.5,2,1,0,1,2,1,1
 900,Kleavor,8,Normal,Axe Pokémon,0,0,0,0,0,0,0,2,Bug,Rock,1.8,89,3,Swarm,Sheer Force,Steadfast,500,70,135,95,45,70,85,,,,Medium Fast,1,Bug,,50,,0.5,1,2,1,1,1,1,0.5,1,1,1,1,2,1,1,1,2,1
-901,Ursaluna,8,Normal,Peat Pokémon,0,0,0,0,0,0,0,2,Ground,Normal,2.4,290,3,Gut,Bulletproof,Unnerve,550,130,140,105,45,80,50,75,,,Medium Fast,1,Field,,50,20,1,1,2,0,2,2,2,0.5,1,1,1,1,0.5,0,1,1,1,1
+901,Ursaluna,8,Normal,Peat Pokémon,0,0,0,0,0,0,0,2,Ground,Normal,2.4,290,3,Guts,Bulletproof,Unnerve,550,130,140,105,45,80,50,75,,,Medium Fast,1,Field,,50,20,1,1,2,0,2,2,2,0.5,1,1,1,1,0.5,0,1,1,1,1
 902,Basculegion Male,8,Normal,Big Fish Pokémon,0,0,0,0,0,1,0,2,Water,Ghost,3,110,3,Rattled,Adaptability,Mold Breaker,530,120,112,65,80,75,78,,,,Medium Fast,1,Water 2,,50,,0,0.5,0.5,2,2,0.5,0,0.5,1,1,1,0.5,1,2,1,2,0.5,1
 902,Basculegion Female,8,Normal,Big Fish Pokémon,0,0,0,0,0,1,0,2,Water,Ghost,3,110,3,Rattled,Adaptability,Mold Breaker,530,120,92,65,100,75,78,,,,Medium Fast,1,Water 2,,50,,0,0.5,0.5,2,2,0.5,0,0.5,1,1,1,0.5,1,2,1,2,0.5,1
 903,Sneasler,8,Normal,Free Climb Pokémon,0,0,0,0,0,0,0,2,Fighting,Poison,1.3,43,2,Pressure,,Poison Touch,510,80,130,60,40,80,120,135,,,Medium Slow,1,Field,,50,20,1,1,1,1,0.5,1,0.5,0.5,2,2,4,0.25,0.5,1,1,0.5,1,1
