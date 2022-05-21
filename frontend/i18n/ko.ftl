@@ -96,8 +96,8 @@ pokemon-info-growth-rate = {$growth_rate ->
   [MediumSlow] 중간느림
   [MediumFast] 중간빠름 
   [Fast] 빠름
-  [Fluctuating] 불규칙
-  [Erratic] 엄청남
+  [Fluctuating] 엄청남
+  [Erratic] 불규칙
   *[other] {$growth_rate}
 }
 pokemon-info-status-label = 구분:
