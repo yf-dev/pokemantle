@@ -1,6 +1,5 @@
 from typing import List
 
-import uvicorn
 import os
 from random import Random
 
@@ -11,11 +10,7 @@ import pandas as pd
 import numpy as np
 
 from .models import ErrorMessage, GuessResult, Pokemon, LocalName
-from .poke2vec import (
-    calculate_ranks,
-    calculate_similarity_vector,
-    create_feature_vector,
-)
+from .poke2vec import calculate_ranks, calculate_similarity_vector
 
 if "POKEMANTLE_POKEDEX" not in os.environ:
     raise Exception("environment variable POKEMANTLE_POKEDEX is not defined")
