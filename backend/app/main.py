@@ -35,9 +35,7 @@ OLD_SECRET = pd.read_csv(os.environ["POKEMANTLE_OLD_SECRET"], index_col="puzzle_
 POKEMON_SIZE = len(POKEDEX.index)
 OLD_SECRET_SIZE = len(OLD_SECRET.index)
 SECRET_INDEXES = RANDOM.sample(range(POKEMON_SIZE), k=POKEMON_SIZE)
-SIMILARITY_VECTOR = calculate_similarity_vector(
-    feature_vector=create_feature_vector(pokedex=POKEDEX)
-)
+SIMILARITY_VECTOR = calculate_similarity_vector(pokedex=POKEDEX)
 
 app = FastAPI(
     docs_url=None if os.environ.get("POKEMANTLE_PRODUCTION", False) else "/docs",
