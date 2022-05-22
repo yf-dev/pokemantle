@@ -1,3 +1,3 @@
 <script setup lang="ts">
-useRouter().push('/')
+useRouter().push("/")
 </script>

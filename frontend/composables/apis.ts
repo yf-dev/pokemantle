@@ -1,8 +1,7 @@
 export const apiLanguages = () =>
   $fetch<Array<string>>(`${apiBase()}/languages`)
 
-export const apiPokemons = () =>
-  $fetch<Array<Pokemon>>(`${apiBase()}/pokemons`)
+export const apiPokemons = () => $fetch<Array<Pokemon>>(`${apiBase()}/pokemons`)
 
 export const apiPokemonNameMap = (language: string) =>
   $fetch<Array<LocalName>>(`${apiBase()}/pokemon_name_map/${language}`)

@@ -1,34 +1,31 @@
-import { defineNuxtConfig } from 'nuxt'
-import fluentPlugin from 'rollup-plugin-fluent-vue'
+import { defineNuxtConfig } from "nuxt"
+import fluentPlugin from "rollup-plugin-fluent-vue"
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode'
-  ],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@pinia/nuxt"],
   typescript: {
-    shim: false
+    shim: false,
   },
   runtimeConfig: {
-    apiServerBase: 'http://localhost:8000',
+    apiServerBase: "http://localhost:8000",
     public: {
-      frontendBase: 'http://localhost:3000',
-      apiClientBase: 'http://localhost:8000',
-      gtagId: 'GA_MEASUREMENT_ID',
-    }
+      frontendBase: "http://localhost:3000",
+      apiClientBase: "http://localhost:8000",
+      gtagId: "GA_MEASUREMENT_ID",
+    },
   },
   colorMode: {
-    classSuffix: ''
+    classSuffix: "",
   },
   vite: {
     plugins: [fluentPlugin()],
     server: {
       hmr: {
-        protocol: 'ws', // TODO: parse from env var
+        protocol: "ws", // TODO: parse from env var
         port: 50443,
         clientPort: 50443,
       },
     },
-  }
+  },
 })
