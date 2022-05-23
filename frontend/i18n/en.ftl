@@ -70,7 +70,7 @@ faq-show-info-description = Yes, click on the Pokémon you guessed in the list t
 
 faq-similarity-title = How does it calculate the similarity?
 faq-similarity-description = Similarity is calculated based on the characteristics of Pokémon(generation, category, type, ability, stat, height, weight, experience group, regional form, mega evolution, partner, form difference, mythical/legendary, egg group).
-  More precisely, it converts the characteristic to feature vectors and calculate the cosine similarity.
+  More precisely, it converts the characteristic to feature vectors and calculate the euclidean/cosine similarity.
 
 faq-once-per-day-title = Can I play more than once a day?
 faq-once-per-day-description = Unfortunately, you can only play once a day.
