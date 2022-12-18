@@ -155,6 +155,11 @@
       <p class="leading-relaxed">
         {{ $t("pokemon-info-etc-label") }}
         <PokemonInfoTag
+          v-if="pokemon.is_paldean"
+          class="bg-amber-200 dark:bg-amber-900"
+          >{{ $t("pokemon-info-etc-is-paldean") }}</PokemonInfoTag
+        >
+        <PokemonInfoTag
           v-if="pokemon.is_hisuian"
           class="bg-teal-200 dark:bg-teal-900"
           >{{ $t("pokemon-info-etc-is-hisuian") }}</PokemonInfoTag
@@ -173,6 +178,11 @@
           v-if="pokemon.is_mega"
           class="bg-lime-200 dark:bg-lime-900"
           >{{ $t("pokemon-info-etc-is-mega") }}
+        </PokemonInfoTag>
+        <PokemonInfoTag
+          v-if="pokemon.is_gigantamax"
+          class="bg-violet-300 dark:bg-violet-900"
+          >{{ $t("pokemon-info-etc-is-gigantamax") }}
         </PokemonInfoTag>
         <PokemonInfoTag
           v-if="pokemon.is_partner"

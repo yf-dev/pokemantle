@@ -47,6 +47,15 @@ resources:
           type: string
           constraints:
             required: true
+        - name: is_paldean
+          title: Is Paldean
+          description: Denotes if the Pokémon is Paldean
+          type: integer
+          constraints:
+            required: true
+            enum:
+              - 0
+              - 1
         - name: is_hisuian
           title: Is Hisuian
           description: Denotes if the Pokémon is Hisuian
@@ -77,6 +86,15 @@ resources:
         - name: is_mega
           title: Is Mega-Evolved
           description: Denotes if the Pokémon is Mega-Evolved
+          type: integer
+          constraints:
+            required: true
+            enum:
+              - 0
+              - 1
+        - name: is_gigantamax
+          title: Is Gigantamax
+          description: Pokémon is capable of Gigantamaxing
           type: integer
           constraints:
             required: true

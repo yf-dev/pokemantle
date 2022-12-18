@@ -14,12 +14,14 @@ docker-compose up # http://localhost:3000/
 ## Generate old_secret.csv
 
 ```bash
+cd backend
 poetry run poe export-old-secret 10
 ```
 
 ## Validate data
 
 ```bash
+cd backend
 poetry run poe validate-data
 ```
 

@@ -1,4 +1,4 @@
-en,ko
+﻿en,ko
 Bulbasaur,이상해씨
 Ivysaur,이상해풀
 Venusaur,이상해꽃
@@ -169,6 +169,9 @@ Magmar,마그마
 Pinsir,쁘사이저
 Mega Pinsir,메가쁘사이저
 Tauros,켄타로스
+Paldean Tauros Combat Breed,켄타로스(팔데아의 모습/컴뱃종)
+Paldean Tauros Blaze Breed,켄타로스(팔데아의 모습/블레이즈종)
+Paldean Tauros Aqua Breed,켄타로스(팔데아의 모습/워터종)
 Magikarp,잉어킹
 Gyarados,갸라도스
 Mega Gyarados,메가갸라도스
@@ -245,6 +248,7 @@ Sunkern,해너츠
 Sunflora,해루미
 Yanma,왕자리
 Wooper,우파
+Paldean Wooper,우파(팔데아의 모습)
 Quagsire,누오
 Espeon,에브이
 Umbreon,블래키
@@ -826,8 +830,8 @@ Meowstic Male,냐오닉스(수컷)
 Meowstic Female,냐오닉스(암컷)
 Honedge,단칼빙
 Doublade,쌍검킬
-Aegislash Blade Forme,킬가르도
-Aegislash Shield Forme,킬가르도(블레이드폼)
+Aegislash Shield Forme,킬가르도
+Aegislash Blade Forme,킬가르도(블레이드폼)
 Spritzee,슈쁘
 Aromatisse,프레프티르
 Swirlix,나룸퍼프
@@ -1085,6 +1089,7 @@ Zacian Hero of Many Battles,자시안
 Zamazenta Crowned Shield,자마젠타(방패왕)
 Zamazenta Hero of Many Battles,자마젠타
 Eternatus,무한다이노
+Eternamax Eternatus,무한다이노(무한다이맥스)
 Kubfu,치고마
 Urshifu Single Strike Style,우라오스(일격의 태세)
 Urshifu Rapid Strike Style,우라오스(연격의 태세)
@@ -1105,3 +1110,114 @@ Sneasler,포푸니크
 Overqwil,장침바루
 Enamorus Incarnate Forme,러브로스
 Enamorus Therian Forme,러브로스(영물폼)
+Sprigatito,나오하
+Floragato,나로테
+Meowscarada,마스카나
+Fuecoco,뜨아거
+Crocalor,악뜨거
+Skeledirge,라우드본
+Quaxly,꾸왁스
+Quaxwell,아꾸왁
+Quaquaval,웨이니발
+Lechonk,맛보돈
+Oinkologne Male,퍼퓨돈(수컷)
+Oinkologne Female,파퓨돈(암컷)
+Tarountula,타렌툴라
+Spidops,트래피더
+Nymble,콩알뚜기
+Lokix,엑스레그
+Pawmi,빠모
+Pawmo,빠모트
+Pawmot,빠르모트
+Tandemaus,두리쥐
+Maushold Family of Four,파밀리쥐(네 식구)
+Maushold Family of Three,파밀리쥐(세 식구)
+Fidough,쫀도기
+Dachsbun,바우첼
+Smoliv,미니브
+Dolliv,올리뇨
+Arboliva,올리르바
+Squawkabilly Green Plumage,시비꼬(그린 페더)
+Squawkabilly Blue Plumage,시비꼬(블루 페더)
+Squawkabilly Yellow Plumage,시비꼬(옐로우 페더)
+Squawkabilly White Plumage,시비꼬(화이트 페더)
+Nacli,베베솔트
+Naclstack,스테솔트
+Garganacl,콜로솔트
+Charcadet,카르본
+Armarouge,카디나르마
+Ceruledge,파라블레이즈
+Tadbulb,빈나두
+Bellibolt,찌리베리
+Wattrel,찌리비
+Kilowattrel,찌리비크
+Maschiff,오라티프
+Mabosstiff,마스티프
+Shroodle,땃쭈르
+Grafaiai,태깅구르
+Bramblin,그푸리
+Brambleghast,공푸리
+Toedscool,들눈해
+Toedscruel,육파리
+Klawf,졀벼게
+Capsakid,캡싸이
+Scovillain,스코빌런
+Rellor,구르데
+Rabsca,베라카스
+Flittle,하느라기
+Espathra,클레스파트라
+Tinkatink,어리짱
+Tinkatuff,벼리짱
+Tinkaton,두드리짱
+Wiglett,바다그다
+Wugtrio,바닥트리오
+Bombirdier,떨구새
+Finizen,맨돌핀
+Palafin Zero Forme,돌핀맨(나이브폼)
+Palafin Hero Forme,돌핀맨(마이티폼)
+Varoom,부르롱
+Revavroom,부르르룸
+Cyclizar,모토마
+Orthworm,꿈트렁
+Glimmet,초롱순
+Glimmora,킬라플로르
+Greavard,망망이
+Houndstone,묘두기
+Flamigo,꼬이밍고
+Cetoddle,터벅고래
+Cetitan,우락고래
+Veluza,가비루사
+Dondozo,어써러셔
+Tatsugiri,싸리용
+Annihilape,저승갓숭
+Clodsire,토오
+Farigiraf,키키링
+Dudunsparce Two-Segment Forme,노고고치(두 마디폼)
+Dudunsparce Three-Segment Forme,노고고치(세 마디폼)
+Kingambit,대도각참
+Great Tusk,위대한엄니
+Scream Tail,우렁찬꼬리
+Brute Bonnet,사나운버섯
+Flutter Mane,날개치는머리
+Slither Wing,땅을기는날개
+Sandy Shocks,모래털가죽
+Iron Treads,무쇠바퀴
+Iron Bundle,무쇠보따리
+Iron Hands,무쇠손
+Iron Jugulis,무쇠머리
+Iron Moth,무쇠독나방
+Iron Thorns,무쇠가시
+Frigibax,드니차
+Arctibax,드니꽁
+Baxcalibur,드닐레이브
+Gimmighoul Chest Forme,모으령(상자폼)
+Gimmighoul Roaming Forme,모으령(도보폼)
+Gholdengo,타부자고
+Wo-Chien,총지엔
+Chien-Pao,파오젠
+Ting-Lu,딩루
+Chi-Yu,위유이
+Roaring Moon,고동치는달
+Iron Valiant,무쇠무인
+Koraidon,코라이돈
+Miraidon,미라이돈
