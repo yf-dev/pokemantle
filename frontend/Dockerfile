@@ -1,4 +1,4 @@
-FROM node:17-alpine AS builder
+FROM node:18-alpine AS builder
 
 RUN mkdir -p /home/node/app
 WORKDIR /home/node/app
@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm run build
 
-FROM node:17-alpine AS runner
+FROM node:18-alpine AS runner
 COPY --from=builder /home/node/app/.output /home/node/app/.output
 
 ENV NITRO_PORT 80

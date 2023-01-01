@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from "nuxt"
+import { defineNuxtConfig } from 'nuxt/config'
 import fluentPlugin from "rollup-plugin-fluent-vue"
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
