@@ -18,7 +18,7 @@ services:
       - 3000:80
     environment:
       - NUXT_PUBLIC_API_CLIENT_BASE=http://localhost:8000
-      - NUXT_PUBLIC_SPRITE_BASE=http://sprite:80
+      - NUXT_PUBLIC_SPRITE_BASE=http://localhost:8001
       - NUXT_API_SERVER_BASE=http://backend:80
       - POKEMANTLE_PRODUCTION=True
 
