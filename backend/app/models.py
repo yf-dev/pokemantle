@@ -59,6 +59,7 @@ class Pokemon(BaseModel):
     against_dark: float = Field(..., example=1)
     against_steel: float = Field(..., example=2)
     against_fairy: float = Field(..., example=1)
+    image_path: Optional[str] = Field(..., example='0.png')
 
 
 class LocalName(BaseModel):

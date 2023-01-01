@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     public: {
       frontendBase: "http://localhost:3000",
       apiClientBase: "http://localhost:8000",
+      spriteBase: "http://localhost:8001",
       gtagId: "GA_MEASUREMENT_ID",
     },
   },

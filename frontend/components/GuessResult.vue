@@ -18,6 +18,7 @@
             </ArrowIcon>
           </button>
         </th>
+        <th class="p-2 pr-0"></th>
         <th class="p-2">
           <button
             class="flex items-center w-full font-bold"

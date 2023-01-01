@@ -12,6 +12,7 @@ import { trackRouter, useState } from "vue-gtag-next"
 const config = useRuntimeConfig()
 api_server_base.value = config.apiServerBase
 api_client_base.value = config.public.apiClientBase
+sprite_base.value = config.public.spriteBase
 
 const state = useStore()
 

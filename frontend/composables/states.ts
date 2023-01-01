@@ -2,6 +2,7 @@ import { defineStore } from "pinia"
 
 export const api_server_base = ref("")
 export const api_client_base = ref("")
+export const sprite_base = ref("")
 
 export const useStore = defineStore("state", {
   state: () => {
@@ -45,7 +46,7 @@ export const useStore = defineStore("state", {
       return guess_data
     },
     changeLocale(locale: string) {
-      if (isValidFluentLocale) {
+      if (isValidFluentLocale(locale)) {
         changeFluentLocale(locale)
         apiPokemonNameMap(locale).then((data) => {
           this.api_data.pokemon_local_name_map = new Map()

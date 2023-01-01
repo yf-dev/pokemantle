@@ -485,6 +485,13 @@ resources:
           constraints:
             required: true
             minimum: 0
+        - name: image_path
+          title: Image path
+          description: Relative path of image (relative to images\sprites\sprites\pokemon)
+          type: string
+          constraints:
+            required: false
+
   - path: name_map.csv
     name: name_map
     profile: tabular-data-resource

@@ -46,3 +46,7 @@ export const b64ToUtf8 = (str: string): string => {
 export const apiBase = (): string => {
   return process.client ? api_client_base.value : api_server_base.value
 }
+
+export const missingPokemonImageUrl = (): string => {
+  return sprite_base.value + "/0.png"
+}

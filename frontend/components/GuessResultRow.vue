@@ -5,6 +5,15 @@
     @click="is_show_pokemon_info = !is_show_pokemon_info"
   >
     <td class="p-2" v-if="is_show_index">{{ guess_data.index + 1 }}</td>
+    <td class="p-2 pr-0 w-12">
+      <img
+        :alt="state.translatePokemonName(guess_data.name, false)"
+        v-lazy="{
+          src: pokemonImageUrl,
+          error: missingPokemonImageUrl(),
+        }"
+      />
+    </td>
     <td class="p-2">
       {{ state.translatePokemonName(guess_data.name, false) }}
     </td>
@@ -33,13 +42,15 @@
     </td>
   </tr>
   <tr v-if="is_show_pokemon_info">
-    <td class="p-2" :colspan="is_show_index ? 4 : 3">
+    <td class="p-2" :colspan="is_show_index ? 5 : 4">
       <PokemonInfo :pokemon="pokemon"></PokemonInfo>
     </td>
   </tr>
 </template>
 
 <script setup lang="ts">
+import { missingPokemonImageUrl } from "~~/composables/utils"
+
 const state = useStore()
 const colorMode = useColorMode()
 const props = defineProps<{
@@ -63,6 +74,17 @@ const isCorrect = computed(() => {
 })
 const pokemon = computed(() => {
   return state.api_data.pokemons.find((v) => v.name === props.guess_data.name)
+})
+
+const pokemonImageUrl = computed(() => {
+  if (
+    pokemon.value?.image_path === undefined ||
+    pokemon.value?.image_path === ""
+  ) {
+    return missingPokemonImageUrl()
+  } else {
+    return sprite_base.value + "/" + pokemon.value?.image_path
+  }
 })
 
 const pokemonCount = computed(() => state.api_data.pokemons.length)

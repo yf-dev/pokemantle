@@ -39,6 +39,7 @@ def calculate_similarity_vector(pokedex: pd.DataFrame) -> np.ndarray:
             # unused columns
             "pokedex_number",
             "name",
+            "image_path",
             # missing columns
             "catch_rate",
             "base_friendship",

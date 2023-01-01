@@ -3,6 +3,18 @@
     class="grid grid-cols-1 zs:grid-cols-2 xs:grid-cols-3 gap-2 text-xs dark:text-slate-300"
   >
     <PokemonInfoBlock>
+      <div>
+        <img
+          class="mx-auto w-full max-w-[100px]"
+          :alt="state.translatePokemonName(pokemon.name, false)"
+          v-lazy="{
+            src: pokemonImageUrl,
+            error: missingPokemonImageUrl(),
+          }"
+        />
+      </div>
+    </PokemonInfoBlock>
+    <PokemonInfoBlock>
       <p class="leading-relaxed">
         {{
           $t("pokemon-info-name", {
@@ -16,21 +28,11 @@
       <p class="leading-relaxed">
         {{ $t("pokemon-info-species", { species: pokemon.species }) }}
       </p>
-    </PokemonInfoBlock>
-    <PokemonInfoBlock>
       <p class="leading-relaxed">
         {{ $t("pokemon-info-height", { height: pokemon.height_m }) }}
       </p>
       <p class="leading-relaxed">
         {{ $t("pokemon-info-weight", { weight: pokemon.weight_kg }) }}
-      </p>
-      <p class="leading-relaxed">
-        {{ $t("pokemon-info-growth-rate-label") }}
-        <PokemonInfoTag :class="growthRateBgClass(pokemon.growth_rate)">{{
-          $t("pokemon-info-growth-rate", {
-            growth_rate: pokemon.growth_rate.replaceAll(" ", ""),
-          })
-        }}</PokemonInfoTag>
       </p>
     </PokemonInfoBlock>
     <PokemonInfoBlock>
@@ -55,6 +57,14 @@
         <PokemonInfoTag :class="typeBgClass(pokemon.type_2)">{{
           $t("pokemon-info-type-2", {
             type_2: pokemon.type_2 !== null ? pokemon.type_2 : "NONE",
+          })
+        }}</PokemonInfoTag>
+      </p>
+      <p class="leading-relaxed">
+        {{ $t("pokemon-info-growth-rate-label") }}
+        <PokemonInfoTag :class="growthRateBgClass(pokemon.growth_rate)">{{
+          $t("pokemon-info-growth-rate", {
+            growth_rate: pokemon.growth_rate.replaceAll(" ", ""),
           })
         }}</PokemonInfoTag>
       </p>
@@ -209,6 +219,17 @@ const state = useStore()
 const props = defineProps<{
   pokemon: Pokemon
 }>()
+
+const pokemonImageUrl = computed(() => {
+  if (
+    props.pokemon.image_path === undefined ||
+    props.pokemon.image_path === ""
+  ) {
+    return missingPokemonImageUrl()
+  } else {
+    return sprite_base.value + "/" + props.pokemon.image_path
+  }
+})
 
 function growthRateBgClass(growth_rate?: string): string {
   const class_name = {

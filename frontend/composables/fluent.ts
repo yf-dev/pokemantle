@@ -23,7 +23,7 @@ export const fluent = createFluentVue({
 
 export const isValidFluentLocale = (locale: string) => locale in fluentBundles
 export const changeFluentLocale = (locale: string) => {
-  if (isValidFluentLocale) {
+  if (isValidFluentLocale(locale)) {
     fluent.bundles = [fluentBundles[locale], enBundle]
   } else {
     fluent.bundles = [enBundle]

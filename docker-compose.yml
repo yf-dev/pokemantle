@@ -18,5 +18,15 @@ services:
       - 3000:80
     environment:
       - NUXT_PUBLIC_API_CLIENT_BASE=http://localhost:8000
+      - NUXT_PUBLIC_SPRITE_BASE=http://sprite:80
       - NUXT_API_SERVER_BASE=http://backend:80
       - POKEMANTLE_PRODUCTION=True
+
+  sprite:
+    image: nginx:alpine
+    ports:
+      - 8001:80
+    restart: unless-stopped
+    volumes:
+      - "./images/nginx.conf:/etc/nginx/nginx.conf:ro"
+      - "./images/sprites/sprites/pokemon:/usr/share/nginx/html:ro"

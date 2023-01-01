@@ -55,6 +55,7 @@ interface Pokemon {
   against_dark: number
   against_steel: number
   against_fairy: number
+  image_path?: string
 }
 
 interface LocalName {
