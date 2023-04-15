@@ -39,6 +39,7 @@
               @keydown.up.prevent="focusPrevAutocompleteButton"
               @focusout="unfocusInput"
               @click="autocompleteItemClicked(name_item)"
+              @mousedown="autocompleteItemClicked(name_item)"
             >
               <span class="block ml-1 truncate">{{
                 name_item.local_name
@@ -136,6 +137,7 @@ const debouncedNameInput = _.debounce((event) => {
 })
 
 function autocompleteItemClicked(name_item: LocalName) {
+  console.log('autocompleteItemClicked called');
   name.value = name_item.local_name
   isCloseAutocomplete.value = true
   nameInput.value?.focus()
