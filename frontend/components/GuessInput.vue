@@ -137,7 +137,6 @@ const debouncedNameInput = _.debounce((event) => {
 })
 
 function autocompleteItemClicked(name_item: LocalName) {
-  console.log('autocompleteItemClicked called');
   name.value = name_item.local_name
   isCloseAutocomplete.value = true
   nameInput.value?.focus()
