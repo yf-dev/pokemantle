@@ -31,7 +31,7 @@
             class="text-gray-900 dark:text-slate-200 relative"
           >
             <div
-              class="w-full h-full p-2 text-left focus:outline-none focus:ring-0 focus:bg-indigo-100 dark:focus:bg-indigo-900"
+              class="w-full h-full p-2 text-left cursor-pointer focus:outline-none focus:ring-0 focus:bg-indigo-100 dark:focus:bg-indigo-900"
               ref="autocompleteButtons"
               :data-index="index"
               tabindex="0"
