@@ -38,6 +38,8 @@
               @focus="focusedAutocompleteItemIndex = index"
               @keydown.down.prevent="focusNextAutocompleteButton"
               @keydown.up.prevent="focusPrevAutocompleteButton"
+              @keydown.enter.prevent="autocompleteItemClicked(name_item)"
+              @keydown.escape.prevent="nameInput?.focus()"
               @focusout="unfocusInput"
               @click="autocompleteItemClicked(name_item)"
             >
@@ -144,7 +146,7 @@ function autocompleteItemClicked(name_item: LocalName) {
 
 function updateStatistics() {
   if (
-    state.last_guess_data.rank === 0 &&
+    state.last_guess_data?.rank === 0 &&
     state.statistics.last_puzzle_number !== state.puzzle_number
   ) {
     state.statistics.clear_count += 1
@@ -187,7 +189,7 @@ function focusNextAutocompleteButton() {
 
 function focusPrevAutocompleteButton() {
   if (focusedAutocompleteItemIndex.value === 0) {
-    nameInput.value.focus()
+    nameInput.value?.focus()
   } else {
     getAutocompleteButton(focusedAutocompleteItemIndex.value - 1)?.focus()
   }
